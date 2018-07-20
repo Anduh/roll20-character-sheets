@@ -1,21 +1,31 @@
-.sheet-background {
-   width: 800px;
-   height: 450px;
+input.sheet-space:checked ~ input.sheet-selector-switch:checked ~ .sheet-space-hide ,
+input.sheet-selector-switch:checked ~ .sheet-default-hide {
+	display: none;
 }
 
-.sheet-background::after {
-   content: "";
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   position: absolute;
-   z-index: -1;   
-   background: url('http://i.imgur.com/7PcOsGV.jpg');
-   background-size: 800px 450px;
+.sheet-space-opera {
+	width: 800px;
+	height: 450px;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+	background: url('http://i.imgur.com/7PcOsGV.jpg');
+	background-size: 800px 450px;
 }
 
-.charsheet button[type=roll].sheet-d6::before {	/*new die changes die roller to d6*/
-	font-family: 'dicefontd6',arial;
+.sheet-space-opera {
+	width: 800px;
+	height: 450px;
+	position: absolute;
+	z-index: -1;
+}
+
+.charsheet button[type=roll].sheet-d6::before {
+	/*new die changes die roller to d6*/
+	font-family: 'dicefontd6', arial;
 	content: 'F ';
 }

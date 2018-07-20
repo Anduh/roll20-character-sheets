@@ -5,8 +5,12 @@
 	"roll20userid": "573391",
 	"preview": "risus-space-opera.jpeg",
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"instructions": "For use with the Risus Universal game system, there is a checkbox to change the sheet to reflect a Space Opera style of play"
 =======
 	"instructions": "For use with the Risus Universal game system, default setup is made to reflect a Space Opera style of play"
 >>>>>>> renames
+=======
+	"instructions": "For use with the Risus Universal game system, there is a checkbox to change the sheet to reflect a Space Opera style of play"
+>>>>>>> default risus sheet start
 }
