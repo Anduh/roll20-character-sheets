@@ -1,0 +1,66 @@
+.sheet-buttons
+  .sheet-dice-roller
+    input(type='text',
+          name='attr_dice_roller_code',
+          placeholder= '2d6!+2',
+          data-i18n-placeholder='dice-roller-code-placeholder',
+          class='sheet-dice-roller__input')
+
+    button(type='roll',
+           name='roll_dice_roller_damage',
+           value!=`&{template:DamageRoll} {{header=@{name} ^{rolls} ^{damage}}} {{code=@{dice_roller_code}}} {{rof=[[ ?{@{query_rate_of_fire}|1} ]]}} ${maxRof.map(n => `{{roll${n}=[[ @{dice_roller_code} ]]}}`).join(' ')} {{reroll=[r](~dice_roller_damage)}}`)
+      span(data-i18n='dice-roller-damage') Damage
+
+    button(type='roll',
+           name='roll_dice_roller_hidden',
+           value!=`/w gm &{template:DiceRoller} {{header=@{name} ^{rolls} @{dice_roller_code}}} {{rof=[[ ?{@{query_rate_of_fire}|1} ]]}} ${maxRof.map(n => `{{roll${n}=[[ @{dice_roller_code} ]]}}`).join(' ')} {{reroll=[r](~dice_roller_hidden)}}`)
+      span(data-i18n='dice-roller-hidden') Hidden
+
+    button(type='roll',
+           name='roll_dice_roller_open',
+           value!=`&{template:DiceRoller} {{header=@{name} ^{rolls} @{dice_roller_code}}} {{rof=[[ ?{@{query_rate_of_fire}|1} ]]}} ${maxRof.map(n => `{{roll${n}=[[ @{dice_roller_code} ]]}}`).join(' ')} {{reroll=[r](~dice_roller_open)}}`)
+      span(data-i18n='dice-roller-roll') Roll
+
+  .sheet-raise-calculator
+    button(type='roll',
+           name='roll_raise_calculator',
+           value!='&{template:InfoBox} {{content=^{roll-of} (?{@{query_roll_result}}) ^{vs-tn} (?{@{query_target_number}|4}) = [[ floor((?{@{query_roll_result}} - ?{@{query_target_number}|4}) / 4) ]] ^{raises}}}')
+      span(data-i18n='raise-calculator') Raise Calculator
+
+  input(type='checkbox',
+        name='attr_toggle_run_explode',
+        class='sheet-buttons__toggle-run-explode')
+
+  .sheet-run-roller.sheet-a
+    input(type='checkbox',
+          name='attr_toggle_run_wounds',
+          class='sheet-buttons__toggle-run-wounds')
+
+    button(type='roll',
+           name='roll_run',
+           value!='&{template:RunRoll} {{header=@{name} ^{runs-ellipsis} [[ @{run_roll} + @{pace} - @{wound_mod} + ?{@{query_modifier}|0} ]]^{exclamation-mark}}} {{mod=?{@{query_modifier}|0}}} {{content=^{pace} (@{pace}) + ^{query-modifier} (?{@{query_modifier}|0}) - ^{wounds} (@{wound_mod}) + @{run_roll}}}',
+           class='sheet-a')
+      span(data-i18n='dice-roller-run') Run
+
+    button(type='roll',
+           name='roll_run',
+           value!='&{template:RunRoll} {{header=@{name} ^{runs-ellipsis} [[ @{run_roll} + @{pace} - @{wound_mod} + ?{@{query_modifier}|0} ]]^{exclamation-mark}}} {{mod=?{@{query_modifier}|0}}} {{content=^{pace} (@{pace}) + ^{query-modifier} (?{@{query_modifier}|0}) + @{run_roll}}}',
+           class='sheet-b')
+      span(data-i18n='dice-roller-run') Run
+
+  .sheet-run-roller.sheet-b
+    input(type='checkbox',
+          name='attr_toggle_run_wounds',
+          class='sheet-buttons__toggle-run-wounds')
+
+    button(type='roll',
+           name='roll_run',
+           value!='&{template:RunRoll} {{header=@{name} ^{runs-ellipsis} [[ @{run_roll}! + @{pace} - @{wound_mod} + ?{@{query_modifier}|0} ]]^{exclamation-mark}}} {{mod=?{@{query_modifier}|0}}} {{content=^{pace} (@{pace}) + ^{query-modifier} (?{@{query_modifier}|0}) - ^{wounds} (@{wound_mod}) + @{run_roll}!}}',
+           class='sheet-a')
+      span(data-i18n='dice-roller-run-ace') Run!
+
+    button(type='roll',
+           name='roll_run',
+           value!='&{template:RunRoll} {{header=@{name} ^{runs-ellipsis} [[ @{run_roll}! + @{pace} - @{wound_mod} + ?{@{query_modifier}|0} ]]^{exclamation-mark}}} {{mod=?{@{query_modifier}|0}}} {{content=^{pace} (@{pace}) + ^{query-modifier} (?{@{query_modifier}|0}) + @{run_roll}!}}',
+           class='sheet-b')
+      span(data-i18n='dice-roller-run-ace') Run!

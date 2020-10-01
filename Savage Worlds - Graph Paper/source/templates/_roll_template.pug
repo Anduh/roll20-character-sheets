@@ -1,0 +1,129 @@
+rolltemplate.sheet-rolltemplate-TraitRoll
+  .sheet-rolltemplate
+    .sheet-rolltemplate__header {{header}}
+    .sheet-rolltemplate__content
+      = '{{#reroll}}'
+      .sheet-rolltemplate__reroll(title='Reroll', data-i18n-title='rolltemplate-reroll-title') {{reroll}}
+      = '{{/reroll}}'
+      = '{{#traitdie}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left {{trait}}
+        .sheet-right
+          span {{traitdie}}&nbsp;
+          = '{{#flat}}'
+          span ({{flat}})
+          = '{{/flat}}'
+      = '{{/traitdie}}'
+      = '{{#wd}}'
+      = '{{#rollGreater() wdroll -1000}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-wild-die') Wild Die
+        .sheet-right {{wd}}
+      = '{{/rollGreater() wdroll -1000}}'
+      = '{{/wd}}'
+      = '{{#commander}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-commander') Commander
+        .sheet-right {{commander}}
+      = '{{/commander}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-modifier') Modifier
+        .sheet-right {{modifier}}
+      = '{{#rollGreater() rof 1}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-dice-rof') Dice/RoF
+        .sheet-right {{rof}}
+      = '{{/rollGreater() rof 1}}'
+      = '{{#rollGreater() wounds 0}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-wound-penalty') Wound Penalty
+        .sheet-right {{wounds}}
+      = '{{/rollGreater() wounds 0}}'
+      = '{{#rollGreater() fatigue 0}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-fatigue') Fatigue
+        .sheet-right {{fatigue}}
+      = '{{/rollGreater() fatigue 0}}'
+    .sheet-rolltemplate__dice
+      .sheet-left
+        each roll in maxRof
+          = `{{#rollGreater() rof ${roll-1}}}`
+          .sheet-rolltemplate__roll(class=`sheet-rolltemplate__roll--${roll}`)
+            = `{{traitroll${roll}}}`
+          = `{{/rollGreater() rof ${roll-1}}}`
+      = '{{#rollGreater() wdroll -1000}}'
+      .sheet-right
+        .sheet-rolltemplate__roll.sheet-rolltemplate__roll--wd
+          = '{{wdroll}}'
+      = '{{/rollGreater() wdroll -1000}}'
+
+rolltemplate.sheet-rolltemplate-DiceRoller
+  .sheet-rolltemplate
+    .sheet-rolltemplate__header {{header}}
+    .sheet-rolltemplate__content
+      .sheet-rolltemplate__reroll(title='Reroll', data-i18n-title='rolltemplate-reroll-title') {{reroll}}
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-dice-rof') Dice/RoF
+        .sheet-right {{rof}}
+    .sheet-rolltemplate__dice
+      each roll in maxRof
+        = `{{#rollGreater() rof ${roll-1}}}`
+        .sheet-rolltemplate__roll(class=`sheet-rolltemplate__roll--${roll}`)
+          = `{{roll${roll}}}`
+        = `{{/rollGreater() rof ${roll-1}}}`
+
+rolltemplate.sheet-rolltemplate-RunRoll
+  .sheet-rolltemplate
+    .sheet-rolltemplate__header {{header}}
+    .sheet-rolltemplate__content {{content}}
+
+rolltemplate.sheet-rolltemplate-InfoBox
+  .sheet-rolltemplate
+    .sheet-rolltemplate__content {{content}}
+
+rolltemplate.sheet-rolltemplate-DamageRoll
+  .sheet-rolltemplate
+    .sheet-rolltemplate__header {{header}}
+    .sheet-rolltemplate__content
+      = '{{#reroll}}'
+      .sheet-rolltemplate__reroll(title='Reroll', data-i18n-title='rolltemplate-reroll-title') {{reroll}}
+      = '{{/reroll}}'
+      = '{{#source_label}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left {{source_label}}
+        .sheet-right {{source}}
+      = '{{/source_label}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-damage') Damage
+        .sheet-right {{code}}
+      = '{{#modifier}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-damage-modifier') Damage Modifier
+        .sheet-right {{modifier}}
+      = '{{/modifier}}'
+      = '{{#ap}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-armor-piercing') Armor Piercing
+        .sheet-right {{ap}}
+      = '{{/ap}}'
+      = '{{#rollGreater() rof 1}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-hits-rof') Hits/RoF
+        .sheet-right {{rof}}
+      = '{{/rollGreater() rof 1}}'
+      = '{{#range}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-range') Range
+        .sheet-right {{range}}
+      = '{{/range}}'
+      = '{{#trapping}}'
+      .sheet-rolltemplate__content-row
+        .sheet-left(data-i18n='rolltemplate-trapping') Trapping
+        .sheet-right {{trapping}}
+      = '{{/trapping}}'
+    .sheet-rolltemplate__dice.sheet-rolltemplate__dice--damage
+      each roll in maxRof
+        = `{{#rollGreater() rof ${roll-1}}}`
+        .sheet-rolltemplate__damage-roll
+          = `{{roll${roll}}}`
+        = `{{/rollGreater() rof ${roll-1}}}`

@@ -1,0 +1,69 @@
+input(type='checkbox',
+      name='attr_toggle_engrams_block',
+      checked=true,
+      class='sheet-toggle sheet-toggle--block')
+
+.sheet-block.sheet-engrams
+  .sheet-header
+    .sheet-header__title.sheet-engrams__name
+      span(name='attr_rename_block_engrams', data-i18n='engrams') Engrams
+    .sheet-header__labels
+      .sheet-engrams__penalty
+        span(data-i18n='engrams-penalty') Penalty
+      .sheet-engrams__description
+        span(data-i18n='engrams-description') Description
+
+  input(type='checkbox',
+        name='attr_engrams_visibility_toggle',
+        checked=true,
+        class='sheet-toggle sheet-toggle--visibility')
+
+  fieldset.repeating_engrams
+    .sheet-repitem
+      .sheet-repitem__primary
+        input(type='text',
+              name='attr_engram_name',
+              placeholder='Engram',
+              data-i18n-placeholder='engrams-name-placeholder',
+              spellcheck='false',
+              class='sheet-align-left sheet-engrams__name sheet-stretch')
+
+        input(type='text',
+              name='attr_engram_penalty',
+              placeholder='-1',
+              spellcheck='false',
+              class='sheet-engrams__penalty')
+
+        input(type='text',
+              name='attr_engram_description',
+              placeholder='e.g. entangle (SWADE 161) power but resisted by Smarts',
+              data-i18n-placeholder='engrams-description-placeholder',
+              spellcheck='false',
+              class='sheet-align-left sheet-engrams__description')
+
+      input(type='checkbox',
+            name='attr_engram_notes_toggle',
+            class='sheet-toggle sheet-toggle--arrow')
+
+      .sheet-repitem__secondary
+        .sheet-repitem__note-label
+          span(data-i18n='engrams-notes-label') Notes:
+
+        input(type='text',
+              name='attr_engram_notes',
+              placeholder='Effect/Description',
+              data-i18n-placeholder='engrams-notes-placeholder',
+              spellcheck='false',
+              class='sheet-align-left sheet-repitem__note sheet-stretch')
+
+        input(type='checkbox',
+              name='attr_engram_note_box_toggle',
+              class='sheet-toggle sheet-toggle--note-box')
+
+        .sheet-repitem__note-box
+          textarea(name='attr_engram_note_box',
+                   placeholder='Notes',
+                   data-i18n-placeholder='engrams-note-box-placeholder',
+                   spellcheck='false')
+
+  .sheet-footer

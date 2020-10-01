@@ -1,0 +1,28 @@
+mixin attribute(name, short)
+  - var trait = name.toLowerCase()
+
+  .sheet-attribute(class=`sheet-attribute--${trait}`)
+
+    button(type='roll',
+           name=`roll_${trait}`,
+           value!=`&{template:TraitRoll} {{header=@{name} ^{rolls} @{rename_${trait}}}} {{trait=@{rename_${trait}}}} {{traitdie=@{${trait}}}} {{flat=@{${trait}_mod}}} {{wounds=[[ @{wound_mod} ]]}} {{fatigue=[[ @{fatigue_mod} ]]}} {{rof=[[ ?{@{query_rate_of_fire}|1}} ]]}} {{modifier=?{@{query_modifier}|0}}} {{wd=@{${trait}_wd}}} ${maxRof.map(n => `{{traitroll${n}=[[ @{${trait}_roll} @{${trait}_mod} - @{fatigue_mod} - @{wound_mod} + ?{@{query_modifier}|0} ]]}}`).join(' ')} {{wdroll=[[ @{${trait}_wd_roll} @{${trait}_mod} - @{fatigue_mod} - @{wound_mod} + ?{@{query_modifier}|0} ]]}} {{reroll=[r](~${trait})}}`,
+           class='sheet-attribute__button')
+      span(name=`attr_rename_${short.toLowerCase()}`, data-i18n=`${short.toLowerCase()}-u`)= short
+
+    input(type='text',
+          name=`attr_${trait}`,
+          placeholder='d4',
+          value='d4',
+          spellcheck='false',
+          class='sheet-hex sheet-hex--48 sheet-hexfield__input')
+
+    input(type='hidden', name=`attr_rename_${trait}`, value=name)
+    input(type='hidden', name=`attr_${trait}_roll`, value='1d4!cs2')
+    input(type='hidden', name=`attr_${trait}_wd_roll`, value='1d6!cs2')
+    input(type='hidden', name=`attr_${trait}_extra_wd_roll`, value='-10000')
+
+    +hexfield(`${trait}_natural`, 'Natural', 'left', 'd4', '', 'sheet-hide-until-needed sheet-hexfield-gray sheet-hexfield--nat')
+
+    +hexfield(`${trait}_mod`, 'Bonus', 'right sheet-exception', '0', '', 'sheet-hide-until-needed sheet-stay-on-input sheet-hexfield--mod')
+
+    +hexfield(`${trait}_wd`, 'WD', 'right', 'd6', '', 'sheet-hide-until-needed sheet-hexfield-gray sheet-hexfield--wd')
