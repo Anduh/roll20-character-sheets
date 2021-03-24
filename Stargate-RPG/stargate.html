@@ -1,8 +1,17 @@
-<input type="radio" name="attr_tab" class="tab tab1" value="1" checked="checked"><span title="Main"></span>
-<input type="radio" name="attr_tab" class="tab tab2" value="2" style="top: -56px;left: 235px;" ><span title="Background"></span>
-<input type="radio" name="attr_tab" class="tab tab3" value="3" style="top: -88px;left: 392px;" ><span title="Settings"></span>
+<input class="toggle" name="attr_sheettype" type="hidden" value="0">
 
-<span class="version bold">Sheet Version: 1.55</span>
+<div class="master-container">
+
+<input type="radio" name="attr_tab" class="tab tab1 player" value="1" checked="checked"><span class="player" title="Main"></span>
+<input type="radio" name="attr_tab" class="tab tab2 player" value="2" style="top: -56px;left: 235px;" ><span class="player" title="Background"></span>
+<input type="radio" name="attr_tab" class="tab tab3 player" value="3" style="top: -88px;left: 392px;" ><span class="player" title="Settings"></span>
+
+<input type="radio" name="attr_tab_npc" class="tab tab1 npc" value="1" checked="checked"><span class="npc" title="NPC"></span>
+<input type="radio" name="attr_tab_npc" class="tab tab2 npc" value="2" style="top: -56px;left: 235px;" ><span class="npc" title="Background"></span>
+<input type="radio" name="attr_tab_npc" class="tab tab3 npc" value="3" style="top: -88px;left: 392px;" ><span class="npc" title="Settings"></span>
+
+
+<span class="version bold">Sheet Version: 1.60</span>
 
 <!-- 
 <div>
@@ -15,7 +24,8 @@
 <!--  --------------------------------------------------------------------------------- -->
 <!--  --------------------------- PAGE 1 ---------------------------------------------- -->
 <!--  --------------------------------------------------------------------------------- -->
-<div class="tab-content tab1 page1">
+
+<div class="tab-content tab1 page1 player">
 
 <!-- NAME SECTION -->
   <div class="name section columnflex nowrap">
@@ -577,7 +587,7 @@
 <!--  --------------------------------------------------------------------------------- -->
 <!--  --------------------------- PAGE 2 ---------------------------------------------- -->
 <!--  --------------------------------------------------------------------------------- -->
-<div class="tab-content tab2 page2">
+<div class="tab-content tab2 page2 player">
 
   <div class="section racial_abilities columnflex nowrap center">
     <label>Racial Abilities</label>
@@ -633,6 +643,13 @@
         <option value="{{subtitle=@{character_name} }}">Yes</option>
         <option value=" ">No</option>
       </select>
+    </div>
+    <div>
+        <span title="Shows a more dense statblock for NPCs. Equipment sections uses the first field from the PC version">Sheet type: </span>
+        <select name="attr_sheettype" style="width:90px;">
+          <option value="0" selected="selected">PC</option>
+          <option value="1">NPC</option>
+        </select>     
     </div>
 
     <div class="rowflex nowrap">
@@ -695,6 +712,7 @@
 
 
   <div class="ammo">
+
     <div class="section columnflex nowrap">
       <label class=" other">NPC stuff</label>
       <div class="rowflex nowrap">
@@ -744,6 +762,57 @@
   </div>
 
 </div>
+
+
+
+<div class="tab-content tab1 page1 npc">
+  
+    <div class="section columnflex nowrap">
+      <label>NPC stuff</label>
+      <div class="rowflex nowrap">
+        <span>CR:</span>
+        <input name="attr_cr" type="number" placeholder="" title="Challenge Rating: @{cr}" value="" class="w40">
+        <span>Speed</span>
+        <input name="attr_speed_npc" type="text" style="width:200px" placeholder="1m Fly(6m)" title="@{speed_npc}" value="" class="w40">
+      </div>
+      <div class="rowflex nowrap">
+        <span>Type:</span>
+        <input name="attr_type" type="text" style="width:350px" placeholder="Medium Humanoid(Scout 2)" title="Challenge Rating: @{type}" value="" class="w40">
+      </div>      
+    </div>
+
+</div>
+
+
+<div class="tab-content tab2 page2 npc">
+  
+    <div class="section columnflex nowrap">
+      <label>Settings</label>
+
+      <div class="rowflex nowrap">
+        <span title="@{whisper}">Whisper rolls?</span>
+        <input name="attr_whisper" title="@{whisper}" type="checkbox" value="/w gm">
+      </div>
+      <div class="rowflex nowrap">
+        <span title="@{show_name}">Show name in rolls?</span>
+        <select name="attr_show_name" title="@{show_name}">
+          <option value="{{subtitle=@{character_name} }}">Yes</option>
+          <option value=" ">No</option>
+        </select>
+      </div>
+      <div>
+          <span title="Shows a more dense statblock for NPCs. Equipment sections uses the first field from the PC version">Sheet type: </span>
+          <select name="attr_sheettype" style="width:90px;">
+            <option value="0" selected="selected">PC</option>
+            <option value="1">NPC</option>
+          </select>     
+      </div>    
+    </div>
+
+</div>
+
+
+</div><!-- wrapper end -->
 
 <!--  --------------------------------------------------------------------------------- -->
 <!--  --------------------------- ROLL TEMPLATES -------------------------------------- -->

@@ -239,9 +239,11 @@ button[type="roll"].sheet-txt-btn:hover{
 
 
 
+/*   PC    */
+
 /* ------------ PAGES ---------- */
 
-div.sheet-page1 {
+div.sheet-page1.sheet-player {
   display: grid;
   grid-template-columns: 4fr 8fr 5fr 6fr;
   grid-template-rows: repeat(5, 2fr) 5fr 4fr;
@@ -262,7 +264,7 @@ div.sheet-page1 {
   margin-top: -84px;
 }
 
-div.sheet-page2 {
+div.sheet-page2.sheet-player {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows:    1fr 1fr 1fr;
@@ -281,7 +283,7 @@ div.sheet-page2 {
   padding: 5px;
 }
 
-div.sheet-page3 {
+div.sheet-page3.sheet-player {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows:    1fr 1fr;
@@ -832,6 +834,20 @@ div.sheet-tab-content{
   display: grid;
 }
 */
+
+
+/* -------- PC/NPC toggle --------------*/
+
+.sheet-master-container .sheet-pc,
+.sheet-master-container .sheet-npc{
+    display: none;
+}
+
+input.sheet-toggle[value="0"] ~ .sheet-master-container .sheet-pc,
+input.sheet-toggle[value="1"] ~ .sheet-master-container .sheet-npc{
+    display: block;
+}
+
 
 
 /*------------------------------------*\
