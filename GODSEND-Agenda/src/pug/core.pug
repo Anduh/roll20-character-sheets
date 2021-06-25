@@ -1,12 +1,11 @@
 
 
-input.gamesys(type="hidden" name="attr_gametype" value="")
+input.gamesys(type="hidden" name="attr_gametype")
 .tab-buttons.spaced.center
   //- <input type="hidden" class="npctoggle" name="attr_npc"  value="0">
   //- each tab in pages
   //-  button(type="action" name=`act_${tab}`) tab
   //- <button class="npc" type="action" name="act_npc" >NPC</button>
-  input.tabstoggle(type="hidden" name="attr_sheetTab" value="character")
   input.gametoggle(type="hidden" name="attr_gametype" value="godsend")
   h1.godsend(title="GODSEND Agenda")
   h1.talislanta(title="Talislanta")
@@ -14,9 +13,11 @@ input.gamesys(type="hidden" name="attr_gametype" value="")
   h1.atlantis(title="Atlantis Second Age")
   div
     span Page selection
-    select(name="attr_sheetTab")
-      each tab in pages
-        option(value=`${tab}`)= tab
+    input.npctoggle(type="hidden" name="attr_npc" value="0")
+    button.pc(type="action" name="act_character") Character
+    button.pc(type="action" name="act_background") Background
+    button.npc(type="action" name="act_npc") NPC
+    button(type="action" name="act_settings") Settings
   .version
     span Sheet Version: 
     span(name="attr_version")
@@ -39,6 +40,7 @@ main.character
     each type in points
       .rowflex.nowrap
         span.cap= type + ' Points'
+
         input.txtfield(name=`attr_${type}_points` type="number" value="")
         span /
         input.txtfield(name=`attr_${type}_points_max` type="number" value="")

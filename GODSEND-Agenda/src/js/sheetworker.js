@@ -6,45 +6,40 @@ const int = score => parseInt(score, 10) || 0;
 
 // tabs
 
-const buttonlist = ["character", "notes", "settings"];
-
+const buttonlist = ["character","background","npc","settings"];
 buttonlist.forEach(button => {
     on(`clicked:${button}`, function() {
-      console.log(button + " was pressed");
-      setAttrs({
-          sheetTab: button
-      });
+        setAttrs({
+            sheetTab: button
+        });
     });
 });
 
+on("sheet:opened", function() {
 
-// game system
+  getAttrs(["npc", "sheetTab"], values => {
 
-/*
-on("change:gametype", function(game) {
+    let npc = int(values["npc"]);
+    let sheetTab = values["sheetTab"];
+    console.log("sheetTab: ", sheetTab);
+    //let page = "character";
 
-  getAttrs("gametype", values => {
-
-    let gametype = values["gametype"];
-    console.log("Game System set to: " + gametype);
-
-    let gamedice = "2d10cf0cs0";
-
-    if (gametype === "godsend"){
-      gamedice = "2d10cf0cs0";
+    if (sheetTab === "character"){
+      npc = 0;
+      console.log("sheetTab was char, set NPC=0: ", npc);
     }
-    else if (gametype === "hellas") {
-      gamedice = "1d20";
+    else if (sheetTab === "npc"){
+      npc = 1;
+      console.log("sheetTab was npc, set NPC=1: ", npc);
     }
-    else if (gametype === "atlantis") {
-      gamedice = "1d20";
+    else if (sheetTab === "background"){
+      console.log("sheetTab was note");
     }
-    else if (gametype === "talislanta") {
-      gamedice = "1d20";
+    else if (sheetTab === "settings"){
+      console.log("sheetTab was settings");
     }
     setAttrs({
-        dice: gamedice
+        npc: npc
     });
   });
-}); */
-
+});

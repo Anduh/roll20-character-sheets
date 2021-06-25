@@ -541,17 +541,29 @@ $urldev: "https://raw.githubusercontent.com/Anduh/roll20-character-sheets/godsen
 
   // -------------- page buttons -------------
 
+
+
   main.character,
-  main.notes,
+  main.background,
+  main.npc,
+  button[type="action"].npc,
+  button[type="action"].pc,
   main.settings {
       display: none;
   }
 
-  // show the selected page
+  // show the selected tab
   input.tabstoggle[value="character"] ~ main.character,
-  input.tabstoggle[value="notes"] ~ main.notes,
+  input.tabstoggle[value="background"] ~ main.background,
+  input.tabstoggle[value="npc"] ~ main.npc,
   input.tabstoggle[value="settings"] ~ main.settings {
       display: grid;
+  }
+
+    // shows/hides page buttons
+  input.npctoggle[value="0"] ~ button[type="action"].pc,
+  input.npctoggle[value="1"] ~ button[type="action"].npc{
+      display: flex;
   }
 
 }

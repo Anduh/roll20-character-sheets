@@ -413,14 +413,22 @@
   font-size: 1.3em;
 }
 .charsheet main.character,
-.charsheet main.notes,
+.charsheet main.background,
+.charsheet main.npc,
+.charsheet button[type=action].npc,
+.charsheet button[type=action].pc,
 .charsheet main.settings {
   display: none;
 }
 .charsheet input.tabstoggle[value=character] ~ main.character,
-.charsheet input.tabstoggle[value=notes] ~ main.notes,
+.charsheet input.tabstoggle[value=background] ~ main.background,
+.charsheet input.tabstoggle[value=npc] ~ main.npc,
 .charsheet input.tabstoggle[value=settings] ~ main.settings {
   display: grid;
+}
+.charsheet input.npctoggle[value="0"] ~ button[type=action].pc,
+.charsheet input.npctoggle[value="1"] ~ button[type=action].npc {
+  display: flex;
 }
 
 .withoutavatars .sheet-rolltemplate-rolls {
