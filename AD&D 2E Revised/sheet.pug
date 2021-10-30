@@ -1,0 +1,25 @@
+
+//include javascript/objects.js
+include pug/mixins.pug
+
+// main sheet code
+include html/sheet-start.html
+include pug/spellsection.pug
+
+// datalist
+include html/datalists.html
+
+//roll templates
+include html/def-template.html
+
+//sheetworkers
+script(type="text/worker")
+     include javascript/TheAaronSheet.js
+     include javascript/abilityScores.js
+     include javascript/weapons.js
+     include javascript/rogueArmor.js
+     include javascript/nonweapon-proficiencies.js
+     include javascript/wizardSpells.js
+     include javascript/priestSpells.js
+     include javascript/sheetWorkers.js
+     include javascript/version.js

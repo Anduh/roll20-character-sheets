@@ -1,0 +1,109 @@
+//-mixin priest-spell-template()
+
+//-mixin priest-sphere-button()
+
+mixin priestspherebutton(rpgclass, lvl)
+    input.sheet-show-spell-spheres-pri(type='checkbox', style='display: none', name='attr_show-spell-sphere-pri', title='@{show-spell-sphere-pri}')
+    .sheet-spell-sphere-pri
+    button.btn(type='action', name=`act_add-spells-${rpgclass}`, title=`%{add-spells-${rpgclass}}`)= `Add ${lvl}-level spells`
+        input.sheet-invisible(name=`attr_add-spell-error-${rpgclass}`, readonly, style='width: 570px; pointer-events: none')
+        br
+        br
+
+mixin spellslotsresetbutton(rpgclass, other)
+    .sheet-inline(style='vertical-align: top;')
+    button.btn(type='action', name=`act_reset-spent-slots-${rpgclass}`, title=`%{reset-spent-slots-${rpgclass}}`) Reset Spell Slots
+    select.sheet-rogue(name='attr_spell-slot-reset-sections', title='@{spell-slot-reset-sections}')
+        option(value='level')= `Current level ${other}`
+        option(value='all')= `All levels ${other}`
+    select(name='attr_spell-slot-reset-function', title='@{spell-slot-reset-function}')
+        option(value='1') Set Cast to 0
+        option(value='2') Set Cast & Memorized to 0
+        option(value='3') Subtract Cast from Memorized & Cast
+
+mixin wizardspelltemplate(rpgclass, lvl)
+    .sheet-flex-wrap
+    fieldset(class=`repeating_spells-${rpgclass}${lvl}` name=`repeating_spells-${rpgclass}${lvl}`)
+        .sheet-flex-item
+        table
+            tbody
+            tr
+                td.sheet-default-header Spell name:
+                td
+                input.sheet-spell-big(type='text', name='attr_spell-name', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-name}`, placeholder='Spell name', list='${rpgclass}${lvl}-spells')
+                td.sheet-default-header Casting time:
+                td
+                input.sheet-short(type='text', name='attr_spell-cast-time', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-cast-time}`, placeholder='Cast time')
+                td
+                button(type='roll', name='roll_spell-init', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-init}`, value='/gmroll [[{([[1d10]]+@{spell-cast-time}), 1}kh1]] [Initiative (@{spell-name})]&{tracker}') Initiative
+        table.sheet-default-header-first-column.sheet-inline
+            tbody
+            tr
+                td Cast / Memorized:
+                td
+                input.sheet-short(type='number', name='attr_spell-cast-value', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-cast-value}`, value='0')
+                b / 
+                input.sheet-short(type='number', name='attr_spell-memorized', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-memorized}`, value='0')
+        table.sheet-default-header-first-column.sheet-inline
+            tbody
+            tr
+                td Spell Points / Arc Used:
+                td
+                input.sheet-short(type='number', name='attr_spell-points', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-points}`, value='0')
+                b / 
+                input.sheet-short(type='number', name='attr_spell-arc', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-arc}`, value='0')
+        input.sheet-show-spell-details.sheet-show-spell-hack(type='checkbox', title=`Show spell details`)
+        span.sheet-show-spell-hack
+        label.sheet-show-spell-hack Show spell details
+        table.sheet-default-header-odd-column.sheet-spell-details
+            tbody
+            tr
+                td Level:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-level', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-level}`, placeholder='Spell level')
+                td School:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-school', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-school}`, placeholder='School')
+                td Compoenets:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-components', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-components}`, placeholder='Components')
+            tr
+                td Range:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-range', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-range}`, placeholder='Range')
+                td Area of Effect:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-aoe', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-aoe}`, placeholder='Area of Effect')
+                td Duration:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-duration', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-duration}`, placeholder='Duration')
+            tr
+                td Damage:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-damage', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-damage}`, placeholder='[[Damage]]')
+                td Damage type:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-damage-type', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-damage-type}`, placeholder='Damage type')
+                td Saving throw:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-saving-throw', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-saving-throw}`, placeholder='Saving Throw')
+            tr
+                td Healing:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-healing', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-healing}`, placeholder='[[Healing]]')
+                td Materials:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-materials', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-materials}`, placeholder='Materials')
+                td Book reference:
+                td
+                input.sheet-spell-half(type='text', name='attr_spell-reference', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-reference}`, placeholder='Book Reference')
+        table.sheet-spell-effect
+            tbody
+            tr
+                td(style='width: 100%')
+                textarea(name='attr_spell-effect', title=`@{repeating_spells-${rpgclass}${lvl}_$X_spell-effect}`, placeholder='Insert Spell effects.', style='margin: 0; height: 60px')
+                td
+                button(type='roll', name='roll_spell-cast', title=`%{repeating_spells-${rpgclass}${lvl}_$X_spell-cast}`, value='@{spell-effect}', style='margin-bottom: 5px') Roll Spell Effects
+                br
+                button(type='roll', name='roll_spell-template', title=`%{repeating_spells-${rpgclass}${lvl}_$X_spell-template}`, value='#REPLACE1#&{template:2Espell}{{title=@{spell-name}}}{{splevel=@{spell-level}}}{{school=@{spell-school}}}{{components=@{spell-components}}}{{time=@{spell-cast-time}}}{{range=@{spell-range}}}{{duration=@{spell-duration}}}{{aoe=@{spell-aoe}}}{{save=@{spell-saving-throw}}}{{damage=@{spell-damage}}}{{damagetype=@{spell-damage-type}}}{{healing=@{spell-healing}}}{{reference=@{spell-reference}}}{{materials=@{spell-materials}}}{{effects=@{spell-effect}}}') Roll Template
+        hr
