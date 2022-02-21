@@ -38,13 +38,13 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   background: #ececec;
 }
 
-.charsheet .sheet-base {
+.charsheet .base {
   margin: 0px;
   padding: 0px;
   width: 100%;
   border: solid black 1px;
 }
-.charsheet .sheet-buttonbar {
+.charsheet .buttonbar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -54,61 +54,61 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   background: #cdc6b1;
   border: solid 1px black;
 }
-.charsheet .sheet-navbuttons {
+.charsheet .navbuttons {
   display: flex;
   text-align: left;
   flex-wrap: nowrap;
   flex: 1 0 75%;
 }
-.charsheet .sheet-line-divider {
+.charsheet .line-divider {
   flex: 0 1 10%;
   align-items: center;
 }
-.charsheet .sheet-docbuttons {
+.charsheet .docbuttons {
   text-align: right;
   flex: 1 0 15%;
 }
-.charsheet .sheet-character,
-.charsheet .sheet-social,
-.charsheet .sheet-skill,
-.charsheet .sheet-combat,
-.charsheet .sheet-equipment,
-.charsheet .sheet-spells,
-.charsheet .sheet-psionics,
-.charsheet .sheet-healer,
-.charsheet .sheet-wards,
-.charsheet .sheet-circles,
-.charsheet .sheet-structures,
-.charsheet .sheet-journal,
-.charsheet .sheet-config,
-.charsheet .sheet-release {
+.charsheet .character,
+.charsheet .social,
+.charsheet .skill,
+.charsheet .combat,
+.charsheet .equipment,
+.charsheet .spells,
+.charsheet .psionics,
+.charsheet .healer,
+.charsheet .wards,
+.charsheet .circles,
+.charsheet .structures,
+.charsheet .journal,
+.charsheet .config,
+.charsheet .release {
   display: none;
 }
-.charsheet .sheet-tabstoggle[value=character] ~ div.sheet-character,
-.charsheet .sheet-tabstoggle[value=social] ~ div.sheet-social,
-.charsheet .sheet-tabstoggle[value=skill] ~ div.sheet-skill,
-.charsheet .sheet-tabstoggle[value=equipment] ~ div.sheet-equipment,
-.charsheet .sheet-tabstoggle[value=combat] ~ div.sheet-combat,
-.charsheet .sheet-tabstoggle[value=spells] ~ div.sheet-spells,
-.charsheet .sheet-tabstoggle[value=psionics] ~ div.sheet-psionics,
-.charsheet .sheet-tabstoggle[value=healer] ~ div.sheet-healer,
-.charsheet .sheet-tabstoggle[value=wards] ~ div.sheet-wards,
-.charsheet .sheet-tabstoggle[value=circles] ~ div.sheet-circles,
-.charsheet .sheet-tabstoggle[value=structures] ~ div.sheet-structures,
-.charsheet .sheet-tabstoggle[value=journal] ~ div.sheet-journal,
-.charsheet .sheet-tabstoggle[value=configuration] ~ div.sheet-config,
-.charsheet .sheet-tabstoggle[value=release] ~ div.sheet-release {
+.charsheet .tabstoggle[value=character] ~ div.character,
+.charsheet .tabstoggle[value=social] ~ div.social,
+.charsheet .tabstoggle[value=skill] ~ div.skill,
+.charsheet .tabstoggle[value=equipment] ~ div.equipment,
+.charsheet .tabstoggle[value=combat] ~ div.combat,
+.charsheet .tabstoggle[value=spells] ~ div.spells,
+.charsheet .tabstoggle[value=psionics] ~ div.psionics,
+.charsheet .tabstoggle[value=healer] ~ div.healer,
+.charsheet .tabstoggle[value=wards] ~ div.wards,
+.charsheet .tabstoggle[value=circles] ~ div.circles,
+.charsheet .tabstoggle[value=structures] ~ div.structures,
+.charsheet .tabstoggle[value=journal] ~ div.journal,
+.charsheet .tabstoggle[value=configuration] ~ div.config,
+.charsheet .tabstoggle[value=release] ~ div.release {
   display: block;
 }
-.charsheet input[value="1"].sheet-showspells ~ .sheet-confspells,
-.charsheet input[value="1"].sheet-showpsionics ~ .sheet-confpsionics,
-.charsheet input[value="1"].sheet-showhealer ~ .sheet-confhealer,
-.charsheet input[value="1"].sheet-showwards ~ .sheet-confwards,
-.charsheet input[value="1"].sheet-showcircles ~ .sheet-confcircles,
-.charsheet input[value="1"].sheet-showstructures ~ .sheet-confstructures {
+.charsheet input[value="1"].showspells ~ .confspells,
+.charsheet input[value="1"].showpsionics ~ .confpsionics,
+.charsheet input[value="1"].showhealer ~ .confhealer,
+.charsheet input[value="1"].showwards ~ .confwards,
+.charsheet input[value="1"].showcircles ~ .confcircles,
+.charsheet input[value="1"].showstructures ~ .confstructures {
   display: inline;
 }
-.charsheet .sheet-topbuttons {
+.charsheet .topbuttons {
   background-color: transparent;
   border: none;
   background-image: none;
@@ -119,7 +119,7 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   margin: 0px;
   padding: 0 5px 0 5px;
 }
-.charsheet .sheet-picbuttons {
+.charsheet .picbuttons {
   color: black;
   background-color: transparent;
   font-family: "Pictos";
@@ -133,20 +133,20 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   margin: 0px;
   padding: 0 5px 0 5px;
 }
-.charsheet .sheet-confspells,
-.charsheet .sheet-confpsionics,
-.charsheet .sheet-confhealer,
-.charsheet .sheet-confwards,
-.charsheet .sheet-confcircles,
-.charsheet .sheet-confstructures {
+.charsheet .confspells,
+.charsheet .confpsionics,
+.charsheet .confhealer,
+.charsheet .confwards,
+.charsheet .confcircles,
+.charsheet .confstructures {
   display: none;
 }
-.charsheet .sheet-character, .charsheet .sheet-social, .charsheet .sheet-skill, .charsheet .sheet-combat,
-.charsheet .sheet-equipment, .charsheet .sheet-journal, .charsheet .sheet-spells, .charsheet .sheet-psionics,
-.charsheet .sheet-healer, .charsheet .sheet-wards, .charsheet .sheet-circles, .charsheet .sheet-structures {
+.charsheet .character, .charsheet .social, .charsheet .skill, .charsheet .combat,
+.charsheet .equipment, .charsheet .journal, .charsheet .spells, .charsheet .psionics,
+.charsheet .healer, .charsheet .wards, .charsheet .circles, .charsheet .structures {
   background: #9cb09b;
 }
-.charsheet .sheet-release, .charsheet .sheet-config {
+.charsheet .release, .charsheet .config {
   background: #c6cdda;
 }
 .charsheet .repcontrol_del,
@@ -221,20 +221,20 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
 .charsheet .repcontrol_move {
   float: left;
 }
-.charsheet input.sheet-arrow {
+.charsheet input.arrow {
   float: left;
 }
-.charsheet .sheet-body {
+.charsheet .body {
   display: none;
 }
-.charsheet input.sheet-arrow:checked ~ .sheet-body {
+.charsheet input.arrow:checked ~ .body {
   display: block;
 }
-.charsheet input[type=number].sheet-nospin::-webkit-inner-spin-button, .charsheet input[type=number].sheet-nospin::-webkit-outer-spin-button {
+.charsheet input[type=number].nospin::-webkit-inner-spin-button, .charsheet input[type=number].nospin::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
 }
-.charsheet input[type=number].sheet-nospin {
+.charsheet input[type=number].nospin {
   -moz-appearance: textfield;
 }
 .charsheet input[type=number]::-webkit-outer-spin-button, .charsheet input[type=number]::-webkit-inner-spin-button {
@@ -244,16 +244,16 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
 .charsheet input[type=number] {
   -moz-appearance: textfield;
 }
-.charsheet .sheet-statheader-container {
+.charsheet .statheader-container {
   display: grid;
   align-items: center;
   grid-template-columns: 450px 100px 150px;
 }
-.charsheet .sheet-whispertoggle-container {
+.charsheet .whispertoggle-container {
   display: grid;
   grid-template-columns: 0px 75px 0px 75px;
 }
-.charsheet .sheet-toggle-left, .charsheet .sheet-toggle-right {
+.charsheet .toggle-left, .charsheet .toggle-right {
   width: 75px;
   height: 18px;
   margin-right: -75px;
@@ -262,7 +262,7 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   z-index: 1;
   opacity: 0;
 }
-.charsheet .sheet-toggle-left + span::before, .charsheet .sheet-toggle-right + span::before {
+.charsheet .toggle-left + span::before, .charsheet .toggle-right + span::before {
   content: attr(title);
   border: solid 2px #889987;
   text-align: center;
@@ -272,37 +272,37 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   height: 18px;
   font-size: 16px;
 }
-.charsheet .sheet-toggle-left:checked + span::before, .charsheet .sheet-toggle-right:checked + span::before {
+.charsheet .toggle-left:checked + span::before, .charsheet .toggle-right:checked + span::before {
   background: #9cb09b;
   border-bottom-color: black;
 }
-.charsheet .sheet-align {
+.charsheet .align {
   align-items: center;
   text-align: center;
 }
-.charsheet .sheet-name-grid-container {
+.charsheet .name-grid-container {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   padding-left: 5px;
   grid-template-columns: 50px 213px 75px 213px;
 }
-.charsheet .sheet-class-grid-container {
+.charsheet .class-grid-container {
   display: grid;
   align-items: center;
   padding-left: 5px;
   grid-template-columns: 50px 213px 45px 100px 85px 213px;
 }
-.charsheet .sheet-class-stats {
+.charsheet .class-stats {
   width: 95px;
 }
-.charsheet .sheet-middle-grid-container {
+.charsheet .middle-grid-container {
   display: grid;
   padding-top: 10px;
   padding-bottom: 10px;
   grid-template-columns: 160px 10px 160px 10px 185px 10px 180px;
 }
-.charsheet .sheet-blue-grid-container {
+.charsheet .blue-grid-container {
   display: grid;
   align-items: center;
   padding: 10px;
@@ -310,15 +310,15 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   border-radius: 10px;
   grid-template-columns: 65px 65px;
 }
-.charsheet button[type=roll].sheet-statdice::before {
+.charsheet button[type=roll].statdice::before {
   content: "";
 }
-.charsheet .sheet-statdice {
+.charsheet .statdice {
   color: black;
   background: #82a3b5;
   font-weight: bold;
 }
-.charsheet .sheet-gold-grid-container {
+.charsheet .gold-grid-container {
   display: grid;
   align-items: center;
   padding: 10px;
@@ -326,7 +326,7 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   border-radius: 10px;
   grid-template-columns: 90px 65px;
 }
-.charsheet .sheet-ltblue-grid-container {
+.charsheet .ltblue-grid-container {
   display: grid;
   align-items: center;
   padding: 10px;
@@ -334,17 +334,17 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   border-radius: 10px;
   grid-template-columns: 90px 75px;
 }
-.charsheet button[type=roll].sheet-rolldice::before {
+.charsheet button[type=roll].rolldice::before {
   content: "";
 }
-.charsheet .sheet-rolldice {
+.charsheet .rolldice {
   color: black;
   background: #a7cacd;
 }
-.charsheet .sheet-roll-field, .charsheet .sheet-caster-field {
+.charsheet .roll-field, .charsheet .caster-field {
   width: 65px;
 }
-.charsheet .sheet-caster-grid-container {
+.charsheet .caster-grid-container {
   display: grid;
   align-items: center;
   padding: 10px;
@@ -352,70 +352,70 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   border-radius: 10px;
   grid-template-columns: 90px 75px;
 }
-.charsheet .sheet-stat-title, .charsheet .sheet-calc-title, .charsheet .sheet-roll-title, .charsheet .sheet-caster-title {
+.charsheet .stat-title, .charsheet .calc-title, .charsheet .roll-title, .charsheet .caster-title {
   text-decoration: underline;
 }
-.charsheet .sheet-mint {
+.charsheet .mint {
   background-color: #e0e8df;
 }
-.charsheet .sheet-autocalc {
+.charsheet .autocalc {
   background-color: #cfd7ce;
 }
-.charsheet .sheet-fraction-grid-container {
+.charsheet .fraction-grid-container {
   display: grid;
   grid-template-columns: 31px 3px 31px;
 }
-.charsheet .sheet-minmax {
+.charsheet .minmax {
   width: 31px;
 }
-.charsheet .sheet-divider {
+.charsheet .divider {
   background-color: #5e6c5d;
 }
-.charsheet .sheet-calc-field {
+.charsheet .calc-field {
   width: 40px;
 }
-.charsheet .sheet-movement-container {
+.charsheet .movement-container {
   display: grid;
   padding: 10px;
   border: 5px solid #889987;
   border-radius: 10px;
   max-width: 685px;
 }
-.charsheet .sheet-leap-grid-container {
+.charsheet .leap-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 150px 75px 75px 30px;
 }
-.charsheet .sheet-movement-panel {
+.charsheet .movement-panel {
   padding-top: 5px;
 }
-.charsheet .sheet-movement-grid-container {
+.charsheet .movement-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 213px 70px 70px 70px 70px 60px 60px;
 }
-.charsheet .sheet-attackoptions-container {
+.charsheet .attackoptions-container {
   display: grid;
   padding-bottom: 5px;
   align-items: center;
   grid-template-columns: 125px 80px 160px 60px 225px;
 }
-.charsheet .sheet-melee-attack-panel, .charsheet .sheet-ranged-attack-panel {
+.charsheet .melee-attack-panel, .charsheet .ranged-attack-panel {
   padding: 10px;
 }
-.charsheet .sheet-melee-attack-panel {
+.charsheet .melee-attack-panel {
   border-bottom: 5px solid #889987;
   max-width: 745px;
 }
-.charsheet .sheet-mountparry-container {
+.charsheet .mountparry-container {
   display: grid;
   grid-template-columns: 0px 75px 0px 75px;
 }
-.charsheet .sheet-mountdamage-container {
+.charsheet .mountdamage-container {
   display: grid;
   grid-template-columns: 0px 75px 0px 75px 0px 75px;
 }
-.charsheet .sheet-ctoggle-left, .charsheet .sheet-ctoggle-middle, .charsheet .sheet-ctoggle-right {
+.charsheet .ctoggle-left, .charsheet .ctoggle-middle, .charsheet .ctoggle-right {
   width: 75px;
   height: 14px;
   margin-right: -75px;
@@ -424,7 +424,7 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   z-index: 1;
   opacity: 0;
 }
-.charsheet .sheet-ctoggle-left + span::before, .charsheet .sheet-ctoggle-middle + span::before, .charsheet .sheet-ctoggle-right + span::before {
+.charsheet .ctoggle-left + span::before, .charsheet .ctoggle-middle + span::before, .charsheet .ctoggle-right + span::before {
   content: attr(title);
   border: solid 2px #889987;
   text-align: center;
@@ -434,518 +434,518 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   height: 14px;
   font-size: 12px;
 }
-.charsheet .sheet-ctoggle-left:checked + span::before, .charsheet .sheet-ctoggle-middle:checked + span::before,
-.charsheet .sheet-ctoggle-right:checked + span::before {
+.charsheet .ctoggle-left:checked + span::before, .charsheet .ctoggle-middle:checked + span::before,
+.charsheet .ctoggle-right:checked + span::before {
   background: #9cb09b;
   border-bottom-color: black;
 }
-.charsheet .sheet-meleetemp-container {
+.charsheet .meleetemp-container {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 160px 50px 50px 50px 50px 60px 40px;
 }
-.charsheet .sheet-mattack-grid-container {
+.charsheet .mattack-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 160px 80px 80px 80px 62px 75px;
 }
-.charsheet button[type=roll].sheet-meleedice::before {
+.charsheet button[type=roll].meleedice::before {
   content: "";
 }
-.charsheet button[type=roll].sheet-rangeddice::before {
+.charsheet button[type=roll].rangeddice::before {
   content: "";
 }
-.charsheet .sheet-mattack-label, .charsheet .sheet-rattack-label {
+.charsheet .mattack-label, .charsheet .rattack-label {
   width: 160px;
 }
-.charsheet .sheet-meleedice, .charsheet .sheet-rangeddice {
+.charsheet .meleedice, .charsheet .rangeddice {
   background: #6b8a76;
   color: #ebebeb;
 }
-.charsheet .sheet-damage-dice {
+.charsheet .damage-dice {
   width: 60px;
 }
-.charsheet div.sheet-mbonus-hide {
+.charsheet div.mbonus-hide {
   display: none;
 }
-.charsheet input.sheet-mbonus-toggle[value="1"] ~ div.sheet-mbonus-hide {
+.charsheet input.mbonus-toggle[value="1"] ~ div.mbonus-hide {
   display: block;
 }
-.charsheet .sheet-mbonus-container {
+.charsheet .mbonus-container {
   display: grid;
   grid-template-columns: 213px 213px 301px;
 }
-.charsheet .sheet-mattack-text, .charsheet .sheet-rattack-text {
+.charsheet .mattack-text, .charsheet .rattack-text {
   width: 38px;
 }
-.charsheet .sheet-mattack-notes {
+.charsheet .mattack-notes {
   height: 18px;
   width: 300px;
   margin: 0px;
   overflow: auto;
   resize: vertical;
 }
-.charsheet .sheet-rattack-notes {
+.charsheet .rattack-notes {
   height: 18px;
   width: 512px;
   margin: 0px;
   overflow: auto;
   resize: vertical;
 }
-.charsheet .sheet-ranged-attack-panel {
+.charsheet .ranged-attack-panel {
   max-width: 745px;
   border-bottom: 5px solid #889987;
 }
-.charsheet .sheet-rangedtemp-container {
+.charsheet .rangedtemp-container {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 160px 50px 50px 60px 40px;
 }
-.charsheet .sheet-rattack-grid-container {
+.charsheet .rattack-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 160px 80px 80px 62px 40px 40px 40px 75px;
 }
-.charsheet div.sheet-rbonus-hide {
+.charsheet div.rbonus-hide {
   display: none;
 }
-.charsheet input.sheet-rbonus-toggle[value="1"] ~ div.sheet-rbonus-hide {
+.charsheet input.rbonus-toggle[value="1"] ~ div.rbonus-hide {
   display: block;
 }
-.charsheet .sheet-rbonus-container {
+.charsheet .rbonus-container {
   display: grid;
   grid-template-columns: 213px 563px;
 }
-.charsheet .sheet-physical-grid-container {
+.charsheet .physical-grid-container {
   display: grid;
   align-items: center;
   padding-left: 10px;
   grid-template-columns: 110px 110px 110px 110px 110px;
 }
-.charsheet .sheet-physical-field {
+.charsheet .physical-field {
   width: 100px;
 }
-.charsheet .sheet-origin-grid-container {
+.charsheet .origin-grid-container {
   display: grid;
   align-items: center;
   padding: 10px;
   grid-template-columns: 110px 220px 220px;
 }
-.charsheet .sheet-mental-grid-container {
+.charsheet .mental-grid-container {
   display: grid;
   align-items: center;
   padding: 10px;
   grid-template-columns: 550px;
 }
-.charsheet .sheet-mental-field {
+.charsheet .mental-field {
   max-height: 60px;
 }
-.charsheet .sheet-inventory-container {
+.charsheet .inventory-container {
   padding-left: 5px;
 }
-.charsheet .sheet-encumbrance-panel {
+.charsheet .encumbrance-panel {
   display: grid;
   align-items: center;
   padding-bottom: 10px;
   grid-template-columns: 85px 20px;
 }
-.charsheet .sheet-weight-box {
+.charsheet .weight-box {
   width: 83px;
 }
-.charsheet .sheet-weightsub-box {
+.charsheet .weightsub-box {
   width: 63px;
 }
-.charsheet .sheet-weapon-grid-container {
+.charsheet .weapon-grid-container {
   display: grid;
   grid-template-columns: 213px 62px 62px 62px 47px 30px auto;
 }
-.charsheet .sheet-weapon-textarea {
+.charsheet .weapon-textarea {
   grid-column: 1/7;
 }
-.charsheet .sheet-weapon-textarea {
+.charsheet .weapon-textarea {
   max-height: 60px;
 }
-.charsheet .sheet-weapon-inventory-panel, .charsheet .sheet-armor-inventory-panel, .charsheet .sheet-gear-inventory-panel,
-.charsheet .sheet-consumable-inventory-panel, .charsheet .sheet-wealth-inventory-panel {
+.charsheet .weapon-inventory-panel, .charsheet .armor-inventory-panel, .charsheet .gear-inventory-panel,
+.charsheet .consumable-inventory-panel, .charsheet .wealth-inventory-panel {
   max-width: 740px;
   padding-bottom: 10px;
 }
-.charsheet .sheet-armor-grid-container {
+.charsheet .armor-grid-container {
   display: grid;
   grid-template-columns: 213px 47px 47px 62px 47px 30px auto;
 }
-.charsheet .sheet-armor-textarea {
+.charsheet .armor-textarea {
   grid-column: 1/7;
 }
-.charsheet .sheet-armor-textarea {
+.charsheet .armor-textarea {
   max-height: 60px;
 }
-.charsheet .sheet-inventory-grid-container {
+.charsheet .inventory-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 213px 213px 213px 62px 30px auto;
 }
-.charsheet .sheet-inventory-textarea {
+.charsheet .inventory-textarea {
   grid-column: 1/6;
 }
-.charsheet .sheet-inventory-textarea {
+.charsheet .inventory-textarea {
   max-height: 60px;
 }
-.charsheet .sheet-counter {
+.charsheet .counter {
   width: 28px;
 }
-.charsheet .sheet-occ-skill-panel, .charsheet .sheet-elective-skill-panel,
-.charsheet .sheet-secondary-skill-panel, .charsheet .sheet-mystic-skill-panel {
+.charsheet .occ-skill-panel, .charsheet .elective-skill-panel,
+.charsheet .secondary-skill-panel, .charsheet .mystic-skill-panel {
   max-width: 710px;
 }
-.charsheet .sheet-skill-container {
+.charsheet .skill-container {
   padding-left: 5px;
 }
-.charsheet .sheet-universalrow-grid-container {
+.charsheet .universalrow-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 30px 150px 50px 150px 50px 150px;
 }
-.charsheet .sheet-skill-grid-container {
+.charsheet .skill-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 30px 213px 50px 15px 50px 50px 50px 50px;
 }
-.charsheet div.sheet-skillextras-hide {
+.charsheet div.skillextras-hide {
   display: none;
 }
-.charsheet input.sheet-skillextras-toggle[value="1"] ~ div.sheet-skillextras-hide {
+.charsheet input.skillextras-toggle[value="1"] ~ div.skillextras-hide {
   display: block;
 }
-.charsheet .sheet-skillextras-container {
+.charsheet .skillextras-container {
   display: grid;
   padding-bottom: 5px;
   grid-template-columns: 700px;
 }
-.charsheet .sheet-skill-notes {
+.charsheet .skill-notes {
   height: 36px;
   width: 700px;
   margin: 0px;
   overflow: auto;
   resize: vertical;
 }
-.charsheet button[type=roll].sheet-skillroll::before {
+.charsheet button[type=roll].skillroll::before {
   content: "";
 }
-.charsheet .sheet-skillroll {
+.charsheet .skillroll {
   color: #ebebeb;
   background: #6b8a76;
 }
-.charsheet .sheet-dicefontd20 {
+.charsheet .dicefontd20 {
   font-family: "dicefontd20";
 }
-.charsheet .sheet-combat-container {
+.charsheet .combat-container {
   padding-left: 5px;
 }
-.charsheet .sheet-melee-proficiency-panel {
+.charsheet .melee-proficiency-panel {
   padding-bottom: 5px;
   border-bottom: 5px solid #889987;
   max-width: 460px;
 }
-.charsheet .sheet-melee-grid-container {
+.charsheet .melee-grid-container {
   display: grid;
   grid-template-columns: 213px 50px 50px 50px 50px 50px;
 }
-.charsheet .sheet-ranged-proficiency-panel {
+.charsheet .ranged-proficiency-panel {
   padding-top: 5px;
   padding-bottom: 5px;
   max-width: 460px;
 }
-.charsheet .sheet-ranged-grid-container {
+.charsheet .ranged-grid-container {
   display: grid;
   grid-template-columns: 213px 50px 50px 50px 50px;
 }
-.charsheet .sheet-combat-skill-panel {
+.charsheet .combat-skill-panel {
   padding: 5px;
   border: 5px solid #889987;
   border-radius: 10px;
   max-width: 525px;
 }
-.charsheet .sheet-combat-grid-container {
+.charsheet .combat-grid-container {
   display: grid;
   grid-template-columns: 250px auto;
 }
-.charsheet .sheet-combat-textarea {
+.charsheet .combat-textarea {
   grid-column: 1/2;
 }
-.charsheet .sheet-combat-textarea {
+.charsheet .combat-textarea {
   max-height: 60px;
 }
-.charsheet .sheet-bonus-grid-container {
+.charsheet .bonus-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 150px 50px 130px 150px 50px;
 }
-.charsheet .sheet-bonus-field {
+.charsheet .bonus-field {
   width: 45px;
 }
-.charsheet .sheet-saving-throw-panel {
+.charsheet .saving-throw-panel {
   padding-top: 5px;
 }
-.charsheet .sheet-saves-grid-container {
+.charsheet .saves-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 150px 50px 30px 70px 150px 50px 30px;
 }
-.charsheet button[type=roll].sheet-savedice::before {
+.charsheet button[type=roll].savedice::before {
   content: "";
 }
-.charsheet .sheet-savedice {
+.charsheet .savedice {
   color: #ebebeb;
   background: #6b8a76;
 }
-.charsheet .sheet-save-notes-container {
+.charsheet .save-notes-container {
   display: grid;
   grid-template-columns: 500px 30px;
 }
-.charsheet .sheet-save-misc {
+.charsheet .save-misc {
   max-width: 500px;
   max-height: 60px;
 }
-.charsheet .sheet-underline {
+.charsheet .underline {
   text-decoration: underline;
 }
-.charsheet .sheet-spells {
+.charsheet .spells {
   padding-left: 5px;
   padding-right: 10px;
 }
-.charsheet .sheet-spell-panel {
+.charsheet .spell-panel {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 80px 170px 80px 170px 80px 170px;
 }
-.charsheet button[type=roll].sheet-rollspell::before {
+.charsheet button[type=roll].rollspell::before {
   content: "";
 }
-.charsheet .sheet-rollspell {
+.charsheet .rollspell {
   color: #ebebeb;
   background: #6b8a76;
 }
-.charsheet .sheet-spell-text {
+.charsheet .spell-text {
   min-width: 735px;
   max-height: 60px;
 }
-.charsheet .sheet-spell-label {
+.charsheet .spell-label {
   width: 165px;
 }
-.charsheet .sheet-spell-attack {
+.charsheet .spell-attack {
   width: 75px;
 }
-.charsheet .sheet-psionics {
+.charsheet .psionics {
   padding-left: 5px;
   padding-right: 10px;
 }
-.charsheet .sheet-psionic-panel {
+.charsheet .psionic-panel {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 80px 215px 80px 80px 80px 215px;
 }
-.charsheet button[type=roll].sheet-rollpsion::before {
+.charsheet button[type=roll].rollpsion::before {
   content: "";
 }
-.charsheet .sheet-rollpsion {
+.charsheet .rollpsion {
   color: #ebebeb;
   background: #6b8a76;
 }
-.charsheet .sheet-psionic-text {
+.charsheet .psionic-text {
   min-width: 735px;
   max-height: 60px;
 }
-.charsheet .sheet-healer {
+.charsheet .healer {
   padding-left: 5px;
   padding-right: 10px;
 }
-.charsheet .sheet-healer-panel {
+.charsheet .healer-panel {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 80px 215px 80px 80px 80px 215px;
 }
-.charsheet button[type=roll].sheet-rollhealer::before {
+.charsheet button[type=roll].rollhealer::before {
   content: "";
 }
-.charsheet .sheet-rollhealer {
+.charsheet .rollhealer {
   color: #ebebeb;
   background: #6b8a76;
 }
-.charsheet .sheet-healer-text {
+.charsheet .healer-text {
   min-width: 735px;
   max-height: 60px;
 }
-.charsheet .sheet-wards {
+.charsheet .wards {
   padding-left: 5px;
   padding-right: 10px;
 }
-.charsheet .sheet-ward-panel {
+.charsheet .ward-panel {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 80px 170px 80px 170px 80px 170px;
 }
-.charsheet .sheet-circles {
+.charsheet .circles {
   padding-left: 5px;
   padding-right: 10px;
 }
-.charsheet .sheet-circle-panel {
+.charsheet .circle-panel {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 80px 170px 80px 170px 80px 170px;
 }
-.charsheet .sheet-structures {
+.charsheet .structures {
   padding-left: 5px;
 }
-.charsheet .sheet-ship-name {
+.charsheet .ship-name {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 215px 215px 65px 65px;
 }
-.charsheet .sheet-ship-details {
+.charsheet .ship-details {
   width: 550px;
   max-height: 75px;
 }
-.charsheet .sheet-shipattack-container {
+.charsheet .shipattack-container {
   width: 770px;
 }
-.charsheet .sheet-ship-attacks {
+.charsheet .ship-attacks {
   display: grid;
   align-items: center;
   grid-template-columns: 110px 110px 110px 110px 330px;
 }
-.charsheet .sheet-ship-text {
+.charsheet .ship-text {
   max-width: 100px;
 }
-.charsheet button[type=roll].sheet-shiproll::before {
+.charsheet button[type=roll].shiproll::before {
   content: "";
 }
-.charsheet .sheet-shiproll {
+.charsheet .shiproll {
   color: #ebebeb;
   background: #6b8a76;
   width: 90px;
 }
-.charsheet .sheet-ship-textarea {
+.charsheet .ship-textarea {
   height: 18px;
   width: 300px;
   margin: 0px;
   overflow: auto;
   resize: vertical;
 }
-.charsheet .sheet-ship-parts {
+.charsheet .ship-parts {
   display: grid;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   grid-template-columns: 80px 80px 80px 80px 80px 80px 80px;
 }
-.charsheet .sheet-structure-name {
+.charsheet .structure-name {
   display: grid;
   align-items: center;
   padding-bottom: 5px;
   grid-template-columns: 215px 215px 65px 65px;
 }
-.charsheet .sheet-structure-details {
+.charsheet .structure-details {
   width: 550px;
   max-height: 75px;
 }
-.charsheet .sheet-structureattack-container {
+.charsheet .structureattack-container {
   width: 770px;
 }
-.charsheet .sheet-structure-attacks {
+.charsheet .structure-attacks {
   display: grid;
   align-items: center;
   grid-template-columns: 110px 110px 110px 110px 330px;
 }
-.charsheet .sheet-structure-text {
+.charsheet .structure-text {
   max-width: 100px;
 }
-.charsheet button[type=roll].sheet-structureroll::before {
+.charsheet button[type=roll].structureroll::before {
   content: "";
 }
-.charsheet .sheet-structureroll {
+.charsheet .structureroll {
   color: #ebebeb;
   background: #6b8a76;
   width: 90px;
 }
-.charsheet .sheet-structure-textarea {
+.charsheet .structure-textarea {
   height: 18px;
   width: 300px;
   margin: 0px;
   overflow: auto;
   resize: vertical;
 }
-.charsheet .sheet-structure-parts {
+.charsheet .structure-parts {
   display: grid;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 5px;
   grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px;
 }
-.charsheet .sheet-journal-container {
+.charsheet .journal-container {
   padding-left: 5px;
 }
-.charsheet .sheet-note-one-panel, .charsheet .sheet-note-two-panel, .charsheet .sheet-note-three-panel {
+.charsheet .note-one-panel, .charsheet .note-two-panel, .charsheet .note-three-panel {
   max-width: 625px;
 }
-.charsheet .sheet-notes-grid-container {
+.charsheet .notes-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 90px 213px auto;
 }
-.charsheet .sheet-second-notes-grid-container {
+.charsheet .second-notes-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 90px 213px auto;
 }
-.charsheet .sheet-third-notes-grid-container {
+.charsheet .third-notes-grid-container {
   display: grid;
   align-items: center;
   grid-template-columns: 90px 213px auto;
 }
-.charsheet button[type=roll].sheet-noteroll::before {
+.charsheet button[type=roll].noteroll::before {
   content: "";
 }
-.charsheet .sheet-noteroll {
+.charsheet .noteroll {
   color: #ebebeb;
   background: #6b8a76;
 }
-.charsheet .sheet-notes-textarea {
+.charsheet .notes-textarea {
   grid-column: 1/3;
 }
-.charsheet .sheet-notes-textarea {
+.charsheet .notes-textarea {
   min-width: 600px;
 }
-.charsheet .sheet-config {
+.charsheet .config {
   padding-left: 5px;
 }
-.charsheet .sheet-configarea {
+.charsheet .configarea {
   display: grid;
   padding-top: 5px;
   grid-template-columns: 200px 500px;
 }
-.charsheet .sheet-tab-options {
+.charsheet .tab-options {
   display: grid;
   align-items: center;
   line-height: 2;
   grid-template-columns: 20px 150px;
 }
-.charsheet .sheet-colortoggle {
+.charsheet .colortoggle {
   display: grid;
   align-items: center;
   grid-template-columns: 0px 75px 0px 75px 0px 75px 0px 75px 0px 75px 0px 75px 0px 75px;
 }
-.charsheet .sheet-toggle-ice, .charsheet .sheet-toggle-orange, .charsheet .sheet-toggle-pine,
-.charsheet .sheet-toggle-teal, .charsheet .sheet-toggle-wine, .charsheet .sheet-toggle-yellow,
-.charsheet .sheet-toggle-violet {
+.charsheet .toggle-ice, .charsheet .toggle-orange, .charsheet .toggle-pine,
+.charsheet .toggle-teal, .charsheet .toggle-wine, .charsheet .toggle-yellow,
+.charsheet .toggle-violet {
   width: 75px;
   height: 18px;
   margin-right: -75px;
@@ -954,10 +954,10 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   z-index: 1;
   opacity: 0;
 }
-.charsheet .sheet-toggle-ice + span::before, .charsheet .sheet-toggle-orange + span::before,
-.charsheet .sheet-toggle-pine + span::before, .charsheet .sheet-toggle-teal + span::before,
-.charsheet .sheet-toggle-wine + span::before, .charsheet .sheet-toggle-yellow + span::before,
-.charsheet .sheet-toggle-violet + span::before {
+.charsheet .toggle-ice + span::before, .charsheet .toggle-orange + span::before,
+.charsheet .toggle-pine + span::before, .charsheet .toggle-teal + span::before,
+.charsheet .toggle-wine + span::before, .charsheet .toggle-yellow + span::before,
+.charsheet .toggle-violet + span::before {
   content: attr(title);
   border: solid 2px #82a3b5;
   text-align: center;
@@ -967,31 +967,31 @@ div#tab-content.tab-content .attributesabilities .largedialog textarea {
   height: 18px;
   font-size: 16px;
 }
-.charsheet .sheet-toggle-ice:checked + span::before {
+.charsheet .toggle-ice:checked + span::before {
   background-color: #ccf4ff;
   color: black;
 }
-.charsheet .sheet-toggle-orange:checked + span::before {
+.charsheet .toggle-orange:checked + span::before {
   background-color: #d46c18;
   color: white;
 }
-.charsheet .sheet-toggle-pine:checked + span::before {
+.charsheet .toggle-pine:checked + span::before {
   background-color: #1e4f1f;
   color: white;
 }
-.charsheet .sheet-toggle-teal:checked + span::before {
+.charsheet .toggle-teal:checked + span::before {
   background-color: #4f9994;
   color: white;
 }
-.charsheet .sheet-toggle-violet:checked + span::before {
+.charsheet .toggle-violet:checked + span::before {
   background-color: #650042;
   color: white;
 }
-.charsheet .sheet-toggle-wine:checked + span::before {
+.charsheet .toggle-wine:checked + span::before {
   background-color: #a3505c;
   color: white;
 }
-.charsheet .sheet-toggle-yellow:checked + span::before {
+.charsheet .toggle-yellow:checked + span::before {
   background-color: #e6c35a;
   color: black;
 }

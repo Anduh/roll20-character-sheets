@@ -1,8 +1,8 @@
-.sheet-release
+.release
   h1 Sheet Version: 1.0
   p
     | For more information on this sheet, check the page dedicated to it on the Roll20 wiki.
-    button.statdice(type="roll", name="roll_wiki", value="&{template:custom} {{color=black}} {{title=**Information Link**}} {{subtitle=Right Click Link to Open in a New Tab.}} {{desc=[Roll20 Wiki Palladium Fantasy 1E](https://wiki.roll20.net/Palladium_Fantasy_1E)}}") Info Link
+    button.statdice(type="roll" name="roll_wiki" value="&{template:custom} {{color=black}} {{title=**Information Link**}} {{subtitle=Right Click Link to Open in a New Tab.}} {{desc=[Roll20 Wiki Palladium Fantasy 1E](https://wiki.roll20.net/Palladium_Fantasy_1E)}}") Info Link
   h5 Recent Changes: 1-25-22
   ul
     li Added an individual bonus field to each skill line on the skills tab (all sections). Added a "Total" field to hold the final tally of Rating, Bonus, IQ Bonus, and Temporary Bonus. Added a sheetworker script to calculate and set that total. When you first open a sheet after this change goes live, the total has not been figured. To trigger the sheetworker to configure all skills on the sheet at once, change the value in the Temporary Bonus field at the top of the skills tab. The output of the skill roll will now be a straight D100 roll, with the "Total" being displayed as your success chance.
