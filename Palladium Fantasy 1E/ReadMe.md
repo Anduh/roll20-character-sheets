@@ -1,5 +1,7 @@
 This sheet was inspired by the Palladium Megaverse sheet, but has had several changes for those familiar with that sheet.
 
+See [Palladium Fantasy 1E](https://wiki.roll20.net/Palladium_Fantasy_1E) on the Roll20 Community Wiki for more info on the sheet.
+
 ### Roll Template
 - The roll template is based on one written by Jakob and referenced here:  [A Better Default Template](https://app.roll20.net/forum/permalink/6792597/)
 - This sheet has a roll template that is called by &{template:custom}.

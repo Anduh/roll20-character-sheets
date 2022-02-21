@@ -1,0 +1,69 @@
+<!-- Main Roll Template -->
+<rolltemplate class="sheet-rolltemplate-custom">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title">{{title}}</div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-note">
+            {{#ammo}}<div class="sheet-ammo">Ammo Count: {{ammo}}</div>{{/ammo}}
+            {{#range}}<div class="sheet-range">Range: {{range}}</div>{{/range}}
+            {{#rof}}<div class="sheet-rof">Rate of Fire: {{rof}}</div>{{/rof}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle ammo range rof desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle ammo range rof desc color}}
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
+
+<!-- Menu Roll Template -->
+<rolltemplate class="sheet-rolltemplate-menu">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title">{{title}}</div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle desc color}}
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
+
+<!-- Spell Roll Template -->
+<rolltemplate class="sheet-rolltemplate-spells">
+    <div class="sheet-container sheet-color-{{color}}">
+        <div class="sheet-header">
+            {{#title}}<div class="sheet-title">{{title}}</div>{{/title}}
+            {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+        </div>
+        <div class="sheet-note">
+            {{#ispcost}}<div class="sheet-ispcost">I.S.P. Cost: {{ispcost}}</div>{{/ispcost}}
+            {{#range}}<div class="sheet-range">Range: {{range}}</div>{{/range}}
+            {{#radius}}<div class="sheet-radius">Radius: {{radius}}</div>{{/radius}}
+            {{#delay}}<div class="sheet-delay">Delay: {{delay}}</div>{{/delay}}
+            {{#preptime}}<div class="sheet-preptime">Prep Time: {{preptime}}</div>{{/preptime}}
+            {{#duration}}<div class="sheet-duration">Duration: {{duration}}</div>{{/duration}}
+            {{#spellstrength}}<div class="sheet=spellstrength">Strength: {{spellstrength}}</div>{{/spellstrength}}
+            {{#spellsave}}<div class="sheet-spellsave">Save: {{spellsave}}</div>{{/spellsave}}
+        </div>
+        <div class="sheet-attack">
+            {{#strike}}<div class="sheet-strike">Strike = {{strike}}</div>{{/strike}}
+            {{#damage}}<div class="sheet-damage">Damage = {{damage}}</div>{{/damage}}
+        </div>
+        <div class="sheet-content">
+            {{#allprops() title subtitle ispcost range radius delay preptime duration spellstrength spellsave strike damage desc color}}
+            <div class="sheet-key">{{key}}</div>
+            <div class="sheet-value">{{value}}</div>
+            {{/allprops() title subtitle ispcost range radius delay preptime duration spellstrength spellsave strike damage desc color}}
+            {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+        </div>
+    </div>
+</rolltemplate>

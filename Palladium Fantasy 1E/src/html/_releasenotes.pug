@@ -1,0 +1,37 @@
+.sheet-release
+  h1 Sheet Version: 1.0
+  p
+    | For more information on this sheet, check the page dedicated to it on the Roll20 wiki.
+    button.statdice(type="roll", name="roll_wiki", value="&{template:custom} {{color=black}} {{title=**Information Link**}} {{subtitle=Right Click Link to Open in a New Tab.}} {{desc=[Roll20 Wiki Palladium Fantasy 1E](https://wiki.roll20.net/Palladium_Fantasy_1E)}}") Info Link
+  h5 Recent Changes: 1-25-22
+  ul
+    li Added an individual bonus field to each skill line on the skills tab (all sections). Added a "Total" field to hold the final tally of Rating, Bonus, IQ Bonus, and Temporary Bonus. Added a sheetworker script to calculate and set that total. When you first open a sheet after this change goes live, the total has not been figured. To trigger the sheetworker to configure all skills on the sheet at once, change the value in the Temporary Bonus field at the top of the skills tab. The output of the skill roll will now be a straight D100 roll, with the "Total" being displayed as your success chance.
+    li The roll templates now have rounded upper corners. Huge and imporant change, I know.
+  h5 Past Changes: 11-14-21
+  ul
+    li Added ammo count, range, and rate of fire to "custom" roll template used for combat rolls. Edited ranged strike roll button to include those values in the roll. Removed the default values for rate of fire and ammo. Any of those 3 values won't display on the roll template output if left blank. Disabled the visual "spinner" arrows in the number input fields.
+  h5 Past Changes: 8-8-21
+  ul
+    li Added the "radius" property to the spell roll template, allowing the header to carry that value for magical abilities that have both range and radius. Added a radius input for spells, wards, and power circles. Centered a few labels, and adjusted the background color for inputs to allow autocalc fields to be darker than regular inputs.
+  h5 Past Changes: 8-18-20
+  ul
+    li Added a new tab named Structures, which has a place to set up some stats for Ships and Structures. Since those are all in static attributes, they can be linked to token bars to track mast, sail, hull, wall, etc. S.D.C.. There is also a repeating section to set up attacks for each one. Since the rules for attacking out of the High Seas book aren't always conventional rolls, I left the attack and damage blank, so you need to make whatever macros you want for those. Or you can do everything in notes for some of the stranger setups based on percentages or whatever.
+  h5 Past Changes: 7-21-20
+  ul
+    li Added a new roll template: spells.
+    li Added tabs for Spells, Psionics, Healer, Wards, Circles, and Configuration.
+    li Added a way to show/hide the new ability tabs, and to set roll template color used by rolls from those tabs.
+  h5 Past Changes:2-18-20
+  ul
+    li Changed the format of the repeating section buttons to fit better with the rest of the sheet.
+    li Changed the buttons on the melee and ranged sections to show full labels.
+    li Moved the temporary bonus fields to the top of each section and incorporated them into the roll buttons. Those bonuses now apply to everything in the section under them.
+    li Made the input fields larger for regular bonuses to facilitate using row id references to weapon proficiency bonuses, and hid those fields on a second row made visible by a checkbox by each row.
+    li Added a notes field for saving throws that will display with every save roll except for Coma/Death. This was added to provide a place for situational save bonuses that don't cover an entire category, such as the diabolist protection from hate ward.
+    li This (I think) wraps up everything I intended to do with the sheet. This batch of changes live on Feb 18, '20.
+  h5 Past Changes:
+  ul
+    li The sheet tabs have been altered to run on sheetworkers.
+    li The repeating attack entries on the statistics tab are now all text instead of number to allow entry of attributes instead of only numbers. This allows the use of repeating section attributes to pull numbers from the weapon proficiencies on the combat tab.
+    li If there are any issues with the sheetworker tabs, I will revert back to a regular tab system.
+    li Hopefully this will be the final stabile version of this sheet.
