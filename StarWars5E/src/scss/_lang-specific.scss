@@ -1,0 +1,141 @@
+/* Translation Overrides */
+/* Spanish */
+.lang-es .sheet-power-container input[name="attr_powercastingtime"] {
+  width: 115px;
+}
+
+.lang-es .sheet-power-container input[name="attr_powerrange"] {
+  width: 200px;
+}
+
+.lang-es .sheet-power-container input[name="attr_powertarget"] {
+  width: 188px;
+}
+
+.lang-es .sheet-power-container input[name="attr_powerduration"] {
+  width: 184px;
+}
+
+.lang-es .sheet-ac-init-speed-container div {
+  position: relative;
+  height: 56px;
+}
+
+.lang-es .sheet-ac-init-speed-container button,
+.lang-es .sheet-ac-init-speed-container .sheet-label {
+  position: absolute;
+  bottom: 0;
+}
+
+.lang-es .sheet-hdice-dsaves-container div.sheet-subcontainer {
+  position: relative;
+  height: 71px;
+}
+
+.lang-es .sheet-hdice-dsaves-container button {
+  position: absolute;
+  bottom: 0;
+}
+
+.lang-es .sheet-hp .sheet-top input[name="attr_hp_max"] {
+  width: 121px;
+}
+
+.lang-es .sheet-hlabel-container input[name="attr_race"] {
+  width: 190px;
+}
+
+.lang-es .sheet-hlabel-container input[name="attr_alignment"] {
+  width: 170px;
+}
+
+.lang-es .sheet-hlabel-container input[name="attr_experience"] {
+  width: 120px;
+}
+
+.lang-es .sheet-npc .sheet-npc_options input[name="attr_npc_actype"] {
+  width: 175px;
+}
+
+.lang-es .sheet-npc .sheet-npc_options input[name="attr_npc_hpformula"] {
+  width: 175px;
+}
+
+.lang-es .sheet-advantagetoggle input.sheet-toggle-left,
+.lang-es .sheet-advantagetoggle input.sheet-toggle-left + span {
+  right: 214px;
+  width: 67px;
+}
+
+.lang-es .sheet-advantagetoggle input.sheet-toggle-center,
+.lang-es .sheet-advantagetoggle input.sheet-toggle-center + span {
+  right: 145px;
+  width: 65px;
+}
+
+.lang-es .sheet-advantagetoggle input.sheet-toggle-right,
+.lang-es .sheet-advantagetoggle input.sheet-toggle-right + span {
+  right: 50px;
+  width: 91px;
+}
+
+.lang-es input[type=radio].sheet-tab-button.sheet-core,
+.lang-es input[type=radio].sheet-tab-button.sheet-core + span {
+  right: 137px;
+  width: 76px;
+}
+
+.lang-es input[type=radio].sheet-tab-button.sheet-bio,
+.lang-es input[type=radio].sheet-tab-button.sheet-bio + span {
+  right: 103px;
+  width: 30px;
+}
+
+.lang-es input[type=radio].sheet-tab-button.sheet-powers,
+.lang-es input[type=radio].sheet-tab-button.sheet-powers + span {
+  right: 21px;
+  width: 78px;
+}
+
+/* Czech */
+.charsheet.lang-cs input[type=radio].sheet-tab-button.sheet-core,
+.charsheet.lang-cs input[type=radio].sheet-tab-button.sheet-core + span {
+  width: 53px;
+}
+
+.charsheet.lang-cs select[name=attr_cust_powerslots] {
+  font-size: 9px;
+}
+
+.charsheet.lang-cs .sheet-power .sheet-options span[data-i18n="at-higher-lvl-dmg:-u"],
+.charsheet.lang-cs .sheet-power .sheet-options span[data-i18n="add-ability-mod-u"],
+.charsheet.lang-cs .sheet-power .sheet-options span[data-i18n="saving-throw:-u"],
+.charsheet.lang-cs .sheet-power .sheet-options span[data-i18n="effect:-u"],
+.charsheet.lang-cs .sheet-ac-init-speed-container .sheet-ac > span {
+  font-size: 8px;
+}
+
+.charsheet.lang-cs .sheet-subcontainer .sheet-top span[data-i18n="total"] + input {
+  width: 75px;
+}
+
+.charsheet.lang-cs .sheet-row span[data-i18n="senses-u"] + input,
+.charsheet.lang-cs .sheet-row span[data-i18n="npc-type-u"] + input {
+  width: 220px;
+}
+
+.charsheet.lang-cs .sheet-class {
+  width: 79px;
+}
+
+.charsheet.lang-cs .sheet-hlabel-container .sheet-multiclass-display {
+  width: 62px;
+}
+
+.charsheet.lang-cs .sheet-hlabel-container .sheet-multiclass-display-level {
+  width: 23px;
+}
+
+.charsheet.lang-cs .sheet-hlabel-container input.sheet-class-level {
+  width: 28px;
+}

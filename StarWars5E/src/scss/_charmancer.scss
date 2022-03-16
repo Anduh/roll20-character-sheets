@@ -1,0 +1,357 @@
+/*******************
+ * CHARACTERMANCER *
+ *******************/
+ .sheet-charmancer.sheet-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 1 1 100%;
+  position: relative;
+  contain: paint;
+}
+.sheet-charmancer .sheet-choices {
+  flex: 40%;
+  max-width: 40%;
+  padding-right: 1em;
+}
+.sheet-charmancer .sheet-info {
+  flex: 60%;
+  position: relative;
+  max-width: calc(60% - 2em);
+}
+.sheet-charmancer .sheet-choices,
+.sheet-charmancer .sheet-info {
+  margin-bottom: 2em;
+}
+.sheet-charmancer .sheet-compendium-page {
+  height: 100%;
+}
+.sheet-charmancer iframe {
+  height: 100%;
+  min-height: 50vh;
+  contain: paint;
+}
+.sheet-charmancer .sheet-choice-showing option:disabled {
+  background-color: #eee;
+}
+.sheet-charmancer select span.sheet-initials {
+  font-size: 6px;
+}
+.sheet-charmancer .sheet-topbar {
+  flex: 100%;
+  margin-bottom: 15px;
+}
+.sheet-charmancer .sheet-topbar div {
+  display: inline-block;
+  width: 12%;
+  border: 1px solid gray;
+  text-align: center;
+}
+.sheet-charmancer .sheet-topbar div span {
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: bold;
+}
+.sheet-charmancer .sheet-topbar div.sheet-meta-info-container {
+  display: flex;
+  width: 80%;
+  border: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.sheet-charmancer .sheet-topbar div.sheet-meta-info-container  span {
+  font-size: 1.2em;
+}
+.sheet-charmancer .sheet-topbar div.sheet-meta-info-container  span.sheet-choice {
+  display: none;
+}
+.sheet-charmancer .sheet-steps {
+  position: sticky;
+  padding: .5em 0;
+  background: #fff;
+  z-index: 1011;
+  top: 0;
+  border-bottom: 1px dashed #ddd;
+  list-style: none;
+  list-style-position: inside;
+  flex: 100%;
+  margin: 0 0 1em;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  transform: translateZ(0);
+}
+.sheet-charmancer button,
+.sheet-charmancer button[type=roll] {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #E8E8E8;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+.sheet-charmancer button[type=roll] {
+  padding: 1px 6px;
+  font-size: 13px;
+  margin: 0;
+}
+.sheet-charmancer button[type=roll]:before {
+  content: '';
+}
+.sheet-charmancer button.sheet-step {
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+.sheet-charmancer button.sheet-step.sheet-next,
+.sheet-charmancer button.sheet-step.sheet-prev,
+.sheet-charmancer button.sheet-step.sheet-done,
+.sheet-charmancer button.sheet-step:not(.sheet-here) {
+  border-color: black;
+  background-color: #E8E8E8;
+  color: black;
+}
+.sheet-charmancer button:hover,
+.sheet-charmancer button:hover.sheet-step,
+.sheet-charmancer button:hover.sheet-step.sheet-done,
+.sheet-charmancer button.sheet-step.sheet-here,
+.sheet-charmancer button[type=roll]:hover,
+.sheet-charmancer button[type=roll]:hover * {
+  color: #fff;
+  background-color: #EC2127;
+}
+.sheet-charmancer button.sheet-exit {
+  text-transform: uppercase;
+  color: #EC2127;
+  background-color: #fff;
+  border-color: #EC2127;
+}
+.sheet-charmancer button[type=back]:disabled:not(.sheet-here) {
+  color: #ddd;
+  background-color: white;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+.sheet-charmancer button:hover.sheet-exit {}
+.sheet-charmancer .sheet-bottombar,
+.sheet-charmancer .sheet-controls {
+  flex: 100%;
+  margin-bottom: 1em;
+}
+.sheet-charmancer .sheet-bottombar {
+  position: sticky;
+  bottom: -1px;
+  border-top: 1px dashed #ddd;
+  padding: .5em 0;
+  background: white;
+  box-sizing: border-box;
+  text-align: center;
+  transform: translateZ(0);
+}
+.sheet-charmancer .sheet-bottombar button {
+  text-transform: uppercase;
+}
+.sheet-charmancer .sheet-jump {
+  margin: 0 auto;
+}
+.sheet-charmancer .sheet-prev {
+  left: 0;
+  position: absolute;
+}
+.sheet-charmancer .sheet-next {
+  right: 0;
+  position: absolute;
+}
+.sheet-charmancer .sheet-row {
+  border: 1px solid #ddd;
+  border-radius: .5em 0 0 0;
+  border-width: 1px 4px 0 1px;
+  margin: 0 -1em 0 0;
+  padding: .5em;
+}
+.sheet-charmancer .sheet-race_traits b {
+  display: block;
+}
+.sheet-charmancer .sheet-race_traits b + b {
+  margin-top: .5em;
+}
+.sheet-charmancer label * {
+  display: block;
+  margin-top: 9px;
+}
+.sheet-charmancer label span:first-child {
+  margin-top: 0;
+}
+.sheet-charmancer select {
+  margin-bottom: 0;
+  width: calc(100% - 2.25em);
+}
+.sheet-charmancer select:not([required]) {
+  width: calc(100% - 3em);
+}
+.sheet-charmancer label p {
+  font-weight: normal;
+}
+.sheet-charmancer label,
+.sheet-charmancer .sheet-label {
+  font-size: 1.2em;
+}
+.sheet-charmancer .sheet-label {
+  display: block;
+  font-weight: bold;
+}
+.sheet-charmancer select + select,
+.sheet-charmancer [class^="sheet-race_level0_choice"] + [class^="sheet-race_level0_choice"],
+.sheet-charmancer [class^="sheet-race_level1_choice"] + [class^="sheet-race_level1_choice"],
+.sheet-charmancer [class^="sheet-class_level0_choice"] + [class^="sheet-class_level0_choice"],
+.sheet-charmancer [class^="sheet-class_level1_choice"] + [class^="sheet-class_level1_choice"] {
+  margin-top: .5em;
+}
+.sheet-charmancer label.sheet-compendium-opt,
+.sheet-charmancer label.sheet-compendium-opt > *,
+.sheet-charmancer label.sheet-abilities_attribute {
+  display: inline;
+  vertical-align: unset;
+}
+.sheet-charmancer .sheet-cancel-prompt {
+  position: fixed;
+  background: white;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 40px 20px 40px 20px;
+  top: 195px;
+  width: 650px;
+  text-align: center;
+}
+.sheet-charmancer.sheet-container .sheet-cancel-prompt {
+  top: 35px;
+}
+.sheet-charmancer *[required]:not(.sheet-choice) {
+  display: inline-block;
+}
+.sheet-charmancer .sheet-hilite::after {
+  content: '* required';
+  font-style: italic;
+  font-weight: normal;
+  display: block;
+  font-size: 14px;
+  font-variant: small-caps;
+}
+.sheet-charmancer .sheet-warning {
+  color: rgb(126, 45, 64);
+}
+.sheet-charmancer button.sheet-warning {
+  color: #fff;
+  background-color: rgb(126, 45, 64);
+  border-color: rgb(126, 45, 64);
+}
+.sheet-charmancer button:hover.sheet-warning {
+  color: rgb(126, 45, 64);
+  background-color: #fff;
+  border-color: rgb(126, 45, 64);
+}
+.sheet-charmancer .sheet-needed::before {
+  font-family: pictos;
+  content: "D";
+}
+.sheet-charmancer .sheet-hilite {
+  color: rgb(126, 45, 64);
+  background: #EFEFEF;
+  border-radius: .5em;
+  box-sizing: border-box;
+  padding: .5em;
+}
+.sheet-charmancer .sheet-hilite div + div {
+  margin: 1em 0 0;
+}
+.sheet-charmancer .sheet-credit_option input[type=number] {
+  width: 4.5em;
+}
+.sheet-manver .sheet-yes_powers {
+  display: flex;
+}
+.sheet-charmancer button.sheet-mancer_info {
+  font-size: 1.25em;
+  width: 1.25em;
+  height: 1.25em;
+  padding: 0;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  background: black;
+  font-weight: bold;
+  font-family: serif;
+  border-radius: 100%;
+  display: inline-block;
+  border: none;
+}
+.sheet-charmancer button.sheet-mancer_info:hover {
+  background: #EC2127;
+}
+.sheet-charmancer [class^="sheet-abilities_radio"]:not(.sheet-choice) {
+  display: flex;
+}
+.sheet-charmancer span label.sheet-compendium-opt {
+  position: relative;
+  justify-content: space-between;
+  padding-right: 0;
+}
+.sheet-charmancer span label.sheet-compendium-opt > span {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  min-width: 1.618em;
+  background-color: #E8E8E8;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sheet-charmancer span label.sheet-compendium-opt > input[type=radio]:disabled + span {
+  color: #ddd;
+  background-color: white;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+.sheet-charmancer span label.sheet-compendium-opt > input[type=radio]:checked + span {
+  color: white;
+  background-color: #EC2127;
+}
+.sheet-charmancer span .sheet-compendium-opt > input[type=radio] {
+  opacity: 0;
+  width: 0;
+  cursor: none;
+}
+
+.sheet-charmancer button.sheet-bg_info {
+  font-size: 1.25em;
+  width: 1.25em;
+  height: 1.25em;
+  padding: 0;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  background: black;
+  font-weight: bold;
+  font-family: serif;
+  border-radius: 100%;
+  display: inline-block;
+  border: none;
+}
+.sheet-charmancer button.sheet-bg_info:hover {
+  background: #EC2127;
+}
+
+.sheet-charmancer .sheet-custom_class label input[type="checkbox"] {
+  display: inline-block;
+  margin-top: inherit;
+  margin: 5px;
+}
+
+/* Firefox 3.5+ */
+body:not(:-moz-handler-blocked) .sheet-charmancer .sheet-steps {
+  top:-.8em;
+}
+body:not(:-moz-handler-blocked) .sheet-charmancer .sheet-bottombar {
+  bottom: -.8em;
+}

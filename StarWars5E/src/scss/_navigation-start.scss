@@ -1,0 +1,278 @@
+
+.charsheet {
+
+  .sheet-pc,
+  .sheet-npc,
+  .sheet-ship 
+  {
+      display: none;
+  }
+
+  .sheet-npc_toggle[value="0"] ~ .sheet-pc,
+  .sheet-npc_toggle[value="1"] ~ .sheet-npc,
+  .sheet-npc_toggle[value="2"] ~ .sheet-ship
+  {
+      display: block;
+  }
+
+  .sheet-container {
+      width: 760px;
+      background: #afc6d6;
+      background: -moz-linear-gradient(left, #afc6d6 0%, #d6d6d6 30%, #d6d6d6 70%, #afc6d6 100%);
+      background: -webkit-linear-gradient(left, #afc6d6 0%,#d6d6d6 30%,#d6d6d6 70%,#afc6d6 100%);
+      background: linear-gradient(to right, #afc6d6 0%,#d6d6d6 30%,#d6d6d6 70%,#afc6d6 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afc6d6', endColorstr='#afc6d6',GradientType=1 );
+      color: #000000;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1em;
+      line-height: 1em;
+      position: relative;
+  }
+
+  input[type=radio].sheet-tab-button {
+      opacity: 0;
+      position: absolute;
+      top: 92px;
+      right: 0px;
+      width: 18px;
+      height: 18px;
+      z-index: 2;
+  }
+
+  input[type=radio].sheet-tab-button + span {
+      position: absolute;
+      top: 92px;
+      right: 0px;
+      width: 17px;
+      height: 17px;
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: #E8E8E8;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+  }
+
+  .sheet-advantagetoggle {
+      position: absolute;
+      top: 92px;
+      left: 570px;
+      z-index: 1;
+  }
+
+  .sheet-advantagetoggle input[type=radio] {
+      opacity: 0;    
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 18px;
+      height: 18px;
+      z-index: 2;
+  }
+
+  .sheet-advantagetoggle input[type=radio] + span {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 17px;
+      height: 17px;
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: #E8E8E8;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+  }
+
+  .sheet-advantagetoggle input[type=radio]:checked + span,
+  input[type=radio].sheet-tab-button:checked + span {
+      color: #FFFFFF;
+      background-color: #EC2127;
+  }
+
+  .sheet-advantagetoggle input.sheet-toggle-left,
+  .sheet-advantagetoggle input.sheet-toggle-left + span {
+      right: 181px;
+      width: 90px;
+  }
+
+  .sheet-advantagetoggle input.sheet-toggle-center,
+  .sheet-advantagetoggle input.sheet-toggle-center + span {
+      right: 113px;
+      width: 65px;
+  }
+
+  .sheet-advantagetoggle input.sheet-toggle-right,
+  .sheet-advantagetoggle input.sheet-toggle-right + span {
+      right: 0px;
+      width: 110px;
+  }
+
+  .sheet-whispertoggle {
+      left: 270px;
+  }
+
+  .sheet-advantagetoggle.sheet-whispertoggle input.sheet-toggle-right,
+  .sheet-advantagetoggle.sheet-whispertoggle input.sheet-toggle-right + span {
+      width: 50px;
+  }
+
+  .sheet-advantagetoggle.sheet-whispertoggle input.sheet-toggle-left,
+  .sheet-advantagetoggle.sheet-whispertoggle input.sheet-toggle-left + span {
+      right: 54px;
+      width: 55px;
+  }
+
+  .sheet-npc_toggle[value="1"] ~ .sheet-advantagetoggle {
+      top: -10px;
+      left: 390px;
+  }
+
+  .sheet-npc_toggle[value="1"] ~ .sheet-advantagetoggle.sheet-whispertoggle {
+      top: -10px;
+      left: 120px;
+  }
+
+  .sheet-advantagetoggle {
+      display: none;
+  }
+
+  .sheet-toggleflag[value*="advantagetoggle"] + .sheet-advantagetoggle,
+  .sheet-toggleflag[value*="whispertoggle"] + .sheet-whispertoggle,
+  .sheet-toggleflag[value="1"] + .sheet-hidden,
+  .sheet-toggleflag[value="1"] + .sheet-row.sheet-hidden
+  {
+      display: block;
+  }
+
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc,
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-powers .sheet-header
+  {
+      display: block;
+      visibility: hidden;
+      width: 0px;
+      top: -150px;
+      margin: 0px;
+      padding: 0px;
+  }
+
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-powers {
+      display: block;
+  }
+
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-core,
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-bio,
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-options
+  {
+      display: none;
+  }
+
+  .sheet-npc_toggle[value="2"] ~ .sheet-ship .sheet-page.sheet-ship-core,
+  .sheet-npc_toggle[value="2"] ~ .sheet-ship .sheet-page.sheet-ship-cargo,
+  .sheet-npc_toggle[value="2"] ~ .sheet-ship .sheet-page.sheet-ship-mods,
+  .sheet-npc_toggle[value="2"] ~ .sheet-ship .sheet-page.sheet-ship-suites
+  {
+      display: none;
+  }
+
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-powers .sheet-body {
+      visibility: visible;
+  }
+
+  .sheet-npc_toggle[value="1"] + .sheet-npcpowercastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-powers .sheet-body .sheet-col {
+      display: block;
+  }
+
+  .sheet-hidden,
+  .sheet-options .sheet-row.sheet-hidden
+  {
+      display: none;
+  }
+
+  .sheet-npc_toggle[value="1"] ~ .sheet-advantagetoggle input[type=radio] + span {
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-weight: normal;
+      background: transparent;
+      border: none;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .sheet-npc_toggle[value="1"] ~ .sheet-advantagetoggle input[type=radio] + span:first-letter {
+      text-transform: uppercase;
+  }
+
+  .sheet-npc_toggle[value="1"] ~ .sheet-advantagetoggle input[type=radio] + span > span.togm {
+      text-transform: uppercase;
+  }
+
+  .sheet-npc_toggle[value="1"] ~ .sheet-advantagetoggle input[type=radio]:checked + span {
+      font-weight: bold;
+      color: rgb(126, 45, 64);
+  }
+
+  .sheet-page {
+      display: none;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-core:checked ~ .sheet-page.sheet-core,
+  input[type=radio].sheet-tab-button.sheet-bio:checked ~ .sheet-page.sheet-bio,
+  input[type=radio].sheet-tab-button.sheet-powers:checked ~ .sheet-page.sheet-powers,
+  input[type=radio].sheet-tab-button.sheet-options:checked ~ .sheet-page.sheet-options,
+  input[type=radio].sheet-tab-button.sheet-ship-core:checked ~ .sheet-page.sheet-ship-core,
+  input[type=radio].sheet-tab-button.sheet-ship-cargo:checked ~ .sheet-page.sheet-ship-cargo,
+  input[type=radio].sheet-tab-button.sheet-ship-mods:checked ~ .sheet-page.sheet-ship-mods,
+  input[type=radio].sheet-tab-button.sheet-ship-suites:checked ~ .sheet-page.sheet-ship-suites
+  {
+      display: block;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-core,
+  input[type=radio].sheet-tab-button.sheet-core + span
+  {
+      right: 121px;
+      width: 45px;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-ship-core,
+  input[type=radio].sheet-tab-button.sheet-ship-core + span {
+      height: 15px;
+      right: 100px;
+      width: 80px;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-ship-cargo,
+  input[type=radio].sheet-tab-button.sheet-ship-cargo + span {
+      height: 15px;
+      right: 20px;
+      width: 80px;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-ship-mods,
+  input[type=radio].sheet-tab-button.sheet-ship-mods + span {
+      top: 110px;
+      height: 15px;
+      right: 100px;
+      width: 80px;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-ship-suites,
+  input[type=radio].sheet-tab-button.sheet-ship-suites + span {
+      top: 110px;
+      height: 15px;
+      right: 20px;
+      width: 80px;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-bio,
+  input[type=radio].sheet-tab-button.sheet-bio + span {
+      right: 88px;
+      width: 30px;
+  }
+
+  input[type=radio].sheet-tab-button.sheet-powers,
+  input[type=radio].sheet-tab-button.sheet-powers + span {
+      right: 20px;
+      width: 65px;
+  }
+}
