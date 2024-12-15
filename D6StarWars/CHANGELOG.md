@@ -1,3 +1,6 @@
+### Version 2.45 (2024-12):
+- code cleanup: rename css classes to not start with a number: CSS best practice 
+
 ### Version 2.44 (2022-08):
 - fix broken style at character sheet background
 
